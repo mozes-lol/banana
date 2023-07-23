@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=3 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
+[ext_resource type="ArrayMesh" uid="uid://lmqhe13x03k7" path="res://assets/suburbian/driveway_long.obj" id="2_fpoo2"]
 
 [node name="level_test_3d" type="Node3D"]
 
@@ -8,5 +9,9 @@
 transform = Transform3D(1, 0, 0, 0, 0.79653, 0.604599, 0, -0.604599, 0.79653, 0, 4.515, 6.305)
 
 [node name="car_test" parent="." instance=ExtResource("1_ivdo5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0134659, 0.0212684, 0.0177698)
 move_status = "manual"
+
+[node name="DrivewayLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(17.5, 0, 0, 0, 17.5, 0, 0, 0, 83.865, 0, 0, 0)
+mesh = ExtResource("2_fpoo2")
