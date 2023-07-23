@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://l7yka1wf5kwp"]
+[gd_scene load_steps=4 format=3 uid="uid://l7yka1wf5kwp"]
 
 [ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="1_jmkpd"]
+[ext_resource type="Script" path="res://objects/cars/car test/car_test.gd" id="1_lsktj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ka1l3"]
 size = Vector3(1.21377, 1.16165, 2.30624)
 
 [node name="car_test" type="CharacterBody3D"]
+script = ExtResource("1_lsktj")
 
 [node name="collider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.655317, 0)

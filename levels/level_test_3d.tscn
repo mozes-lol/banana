@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ctvm0eiklsuaf"]
 
-[ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car_test.tscn" id="1_ivdo5"]
+[ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
 
 [node name="level_test_3d" type="Node3D"]
 
