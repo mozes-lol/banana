@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwtx2f88rpjso"
+path="res://.godot/imported/fence_short.obj-482e33c7af30b73bf301c2821cd3975d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fence_short.obj-482e33c7af30b73bf301c2821cd3975d.mesh"]
+
+source_file="res://assets/suburbian/fence_short.obj"
+dest_files=["res://.godot/imported/fence_short.obj-482e33c7af30b73bf301c2821cd3975d.mesh", "res://.godot/imported/fence_short.obj-482e33c7af30b73bf301c2821cd3975d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

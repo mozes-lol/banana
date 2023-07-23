@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0soab752m5an"
+path="res://.godot/imported/suvLuxury.obj-c4ed840369efddf8324d8a54c04b9774.mesh"
+
+[deps]
+
+files=["res://.godot/imported/suvLuxury.obj-c4ed840369efddf8324d8a54c04b9774.mesh"]
+
+source_file="res://assets/vehicles/suvLuxury.obj"
+dest_files=["res://.godot/imported/suvLuxury.obj-c4ed840369efddf8324d8a54c04b9774.mesh", "res://.godot/imported/suvLuxury.obj-c4ed840369efddf8324d8a54c04b9774.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

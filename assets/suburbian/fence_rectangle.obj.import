@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://be4250pft30h"
+path="res://.godot/imported/fence_rectangle.obj-8d833ee55f2c1b34c70c2ac0edafd142.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fence_rectangle.obj-8d833ee55f2c1b34c70c2ac0edafd142.mesh"]
+
+source_file="res://assets/suburbian/fence_rectangle.obj"
+dest_files=["res://.godot/imported/fence_rectangle.obj-8d833ee55f2c1b34c70c2ac0edafd142.mesh", "res://.godot/imported/fence_rectangle.obj-8d833ee55f2c1b34c70c2ac0edafd142.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

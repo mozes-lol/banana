@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwfifx2v6nru3"
+path="res://.godot/imported/path_tilesLong.obj-9da00cbf196d85a977a6a700d7b8d34f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path_tilesLong.obj-9da00cbf196d85a977a6a700d7b8d34f.mesh"]
+
+source_file="res://assets/suburbian/path_tilesLong.obj"
+dest_files=["res://.godot/imported/path_tilesLong.obj-9da00cbf196d85a977a6a700d7b8d34f.mesh", "res://.godot/imported/path_tilesLong.obj-9da00cbf196d85a977a6a700d7b8d34f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

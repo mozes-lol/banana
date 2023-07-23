@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://y58ow7xcxxy8"
+path="res://.godot/imported/path_short.obj-491a88d846dd8ffb8df827ce2ca59fa8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/path_short.obj-491a88d846dd8ffb8df827ce2ca59fa8.mesh"]
+
+source_file="res://assets/suburbian/path_short.obj"
+dest_files=["res://.godot/imported/path_short.obj-491a88d846dd8ffb8df827ce2ca59fa8.mesh", "res://.godot/imported/path_short.obj-491a88d846dd8ffb8df827ce2ca59fa8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
