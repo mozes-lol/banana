@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bc4ld7p5cr65m"
+path="res://.godot/imported/garbageTruck.obj-d970acc2f9a93477b9ab814973462b43.mesh"
+
+[deps]
+
+files=["res://.godot/imported/garbageTruck.obj-d970acc2f9a93477b9ab814973462b43.mesh"]
+
+source_file="res://assets/vehicles/garbageTruck.obj"
+dest_files=["res://.godot/imported/garbageTruck.obj-d970acc2f9a93477b9ab814973462b43.mesh", "res://.godot/imported/garbageTruck.obj-d970acc2f9a93477b9ab814973462b43.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

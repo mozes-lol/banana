@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rkw6ri04fkyp"
+path="res://.godot/imported/sedanSports.obj-45639b2767326c20940cc009349e365a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sedanSports.obj-45639b2767326c20940cc009349e365a.mesh"]
+
+source_file="res://assets/vehicles/sedanSports.obj"
+dest_files=["res://.godot/imported/sedanSports.obj-45639b2767326c20940cc009349e365a.mesh", "res://.godot/imported/sedanSports.obj-45639b2767326c20940cc009349e365a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

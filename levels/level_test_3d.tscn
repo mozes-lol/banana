@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctvm0eiklsuaf"]
+
+[ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car_test.tscn" id="1_ivdo5"]
+
+[node name="level_test_3d" type="Node3D"]
+
+[node name="car_test" parent="." instance=ExtResource("1_ivdo5")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.79653, 0.604599, 0, -0.604599, 0.79653, 0, 4.515, 6.305)

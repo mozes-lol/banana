@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bexklwuvsyps3"
+path="res://.godot/imported/wheelTractorBack.obj-5f51d2a4b4d00f4762e0883108fbeed8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheelTractorBack.obj-5f51d2a4b4d00f4762e0883108fbeed8.mesh"]
+
+source_file="res://assets/vehicles/wheelTractorBack.obj"
+dest_files=["res://.godot/imported/wheelTractorBack.obj-5f51d2a4b4d00f4762e0883108fbeed8.mesh", "res://.godot/imported/wheelTractorBack.obj-5f51d2a4b4d00f4762e0883108fbeed8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

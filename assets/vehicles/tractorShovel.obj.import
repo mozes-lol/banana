@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpvkbw70rimx8"
+path="res://.godot/imported/tractorShovel.obj-1a8b7891477a8bc85634239967d68625.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tractorShovel.obj-1a8b7891477a8bc85634239967d68625.mesh"]
+
+source_file="res://assets/vehicles/tractorShovel.obj"
+dest_files=["res://.godot/imported/tractorShovel.obj-1a8b7891477a8bc85634239967d68625.mesh", "res://.godot/imported/tractorShovel.obj-1a8b7891477a8bc85634239967d68625.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
