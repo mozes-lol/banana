@@ -17,10 +17,11 @@ func get_input():
 	elif move_status == "no_move":
 		# vehicle does not move
 		pass
-	
-
 
 func _physics_process(delta):
 	get_input()
 	rotation.y += rotation_direction * rotation_speed * delta
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		print("I collided with ", collision.get_collider().name)
