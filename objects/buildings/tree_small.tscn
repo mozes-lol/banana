@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60qcep2gdqed"]
+
+[ext_resource type="ArrayMesh" uid="uid://b555kvk4hprut" path="res://assets/suburbian/tree_small.obj" id="1_5x561"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l2c4g"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="TreeSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_5x561")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.211971, 0, 0, 0, 1, 0, 0, 0, 0.216684, 0, 0.982621, 0)
+shape = SubResource("CylinderShape3D_l2c4g")

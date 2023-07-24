@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=4 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
 [ext_resource type="ArrayMesh" uid="uid://lmqhe13x03k7" path="res://assets/suburbian/driveway_long.obj" id="2_fpoo2"]
-[ext_resource type="ArrayMesh" uid="uid://cm2rkdm0tk632" path="res://assets/suburbian/house_type06.obj" id="4_qt1yr"]
 
 [node name="level_test_3d" type="Node3D"]
 
@@ -12,7 +11,7 @@ transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0,
 script = ExtResource("1_3kf58")
 
 [node name="car_test" parent="." instance=ExtResource("1_ivdo5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0134659, 0.0212684, 0.0177698)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.0924471, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.35031, 0)
@@ -23,9 +22,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0718143, 0)
 [node name="DrivewayLong" type="MeshInstance3D" parent="level"]
 transform = Transform3D(17.5, 0, 0, 0, 17.5, 0, 0, 0, 83.865, 0, 0, 0)
 mesh = ExtResource("2_fpoo2")
-skeleton = NodePath("../..")
-
-[node name="HouseType06" type="MeshInstance3D" parent="level"]
-transform = Transform3D(4.865, 0, 0, 0, 4.865, 0, 0, 0, 4.865, 9.07424, 0, 0)
-mesh = ExtResource("4_qt1yr")
 skeleton = NodePath("../..")

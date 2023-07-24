@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg0gu1mv75kda"]
+
+[ext_resource type="ArrayMesh" uid="uid://bfjq650qxbjyp" path="res://assets/suburbian/house_type04.obj" id="1_r8mpd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b2upo"]
+
+[node name="house_4" type="StaticBody3D"]
+
+[node name="HouseType04" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_r8mpd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5.92068, 0, 0, 0, 3.07989, 0, 0, 0, 3.87157, -3.25108, 1.50639, 2.28131)
+shape = SubResource("BoxShape3D_b2upo")
