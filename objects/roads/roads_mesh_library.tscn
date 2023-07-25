@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://bxysnjfnnrkd5"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsxi0j1bxffs8" path="res://assets/suburbian/path_long.obj" id="1_7ya3h"]
+[ext_resource type="ArrayMesh" uid="uid://y58ow7xcxxy8" path="res://assets/suburbian/path_short.obj" id="2_51c1p"]
+[ext_resource type="ArrayMesh" uid="uid://dwfifx2v6nru3" path="res://assets/suburbian/path_tilesLong.obj" id="3_erts4"]
+[ext_resource type="ArrayMesh" uid="uid://dx34aitmo1g8e" path="res://assets/suburbian/path_tilesShort.obj" id="4_v2ccj"]
+[ext_resource type="ArrayMesh" uid="uid://lmqhe13x03k7" path="res://assets/suburbian/driveway_long.obj" id="5_b28cg"]
+[ext_resource type="ArrayMesh" uid="uid://rdsnufhlhp02" path="res://assets/suburbian/driveway_short.obj" id="6_q7x0y"]
+[ext_resource type="ArrayMesh" uid="uid://yfc2vfrpoc8r" path="res://assets/suburbian/fence_large.obj" id="7_reyie"]
+[ext_resource type="ArrayMesh" uid="uid://2enqdag3kjfx" path="res://assets/suburbian/fence_medium.obj" id="8_25xic"]
+[ext_resource type="ArrayMesh" uid="uid://cf2xod7i8b8vy" path="res://assets/suburbian/fence_open.obj" id="9_7wmkj"]
+[ext_resource type="ArrayMesh" uid="uid://be4250pft30h" path="res://assets/suburbian/fence_rectangle.obj" id="10_535yp"]
+[ext_resource type="ArrayMesh" uid="uid://dwtx2f88rpjso" path="res://assets/suburbian/fence_short.obj" id="11_06tv2"]
+[ext_resource type="ArrayMesh" uid="uid://bs05gcvjcb6qg" path="res://assets/suburbian/fence_small.obj" id="12_fckok"]
+[ext_resource type="ArrayMesh" uid="uid://hg45hyn2ypf1" path="res://assets/suburbian/fence_wide.obj" id="13_tl2j1"]
+
+[node name="roads_mesh_library" type="Node3D"]
+
+[node name="PathLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_7ya3h")
+
+[node name="PathShort" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("2_51c1p")
+
+[node name="PathTilesLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("3_erts4")
+
+[node name="PathTilesShort" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("4_v2ccj")
+
+[node name="DrivewayLong" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("5_b28cg")
+
+[node name="DrivewayShort" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("6_q7x0y")
+
+[node name="FenceLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("7_reyie")
+
+[node name="FenceMedium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("8_25xic")
+
+[node name="FenceOpen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("9_7wmkj")
+
+[node name="FenceRectangle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("10_535yp")
+
+[node name="FenceShort" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("11_06tv2")
+
+[node name="FenceSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("12_fckok")
+
+[node name="FenceWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175366, 0, 0.247885)
+mesh = ExtResource("13_tl2j1")
