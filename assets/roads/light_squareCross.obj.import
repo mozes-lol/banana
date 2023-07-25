@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vn3yh4674kxy"
+path="res://.godot/imported/light_squareCross.obj-250574582bd7756076212faa1dc5d928.mesh"
+
+[deps]
+
+files=["res://.godot/imported/light_squareCross.obj-250574582bd7756076212faa1dc5d928.mesh"]
+
+source_file="res://assets/roads/light_squareCross.obj"
+dest_files=["res://.godot/imported/light_squareCross.obj-250574582bd7756076212faa1dc5d928.mesh", "res://.godot/imported/light_squareCross.obj-250574582bd7756076212faa1dc5d928.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

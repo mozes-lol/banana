@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bms5pyl81ukmr"
+path="res://.godot/imported/tile_low.obj-fff07e85251ba731ae1b076cdfbd0173.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tile_low.obj-fff07e85251ba731ae1b076cdfbd0173.mesh"]
+
+source_file="res://assets/roads/tile_low.obj"
+dest_files=["res://.godot/imported/tile_low.obj-fff07e85251ba731ae1b076cdfbd0173.mesh", "res://.godot/imported/tile_low.obj-fff07e85251ba731ae1b076cdfbd0173.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

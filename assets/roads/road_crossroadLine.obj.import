@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqlkl3jtfa4qf"
+path="res://.godot/imported/road_crossroadLine.obj-c7c1b20fc6dcc22243a9db78fbc2aa34.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_crossroadLine.obj-c7c1b20fc6dcc22243a9db78fbc2aa34.mesh"]
+
+source_file="res://assets/roads/road_crossroadLine.obj"
+dest_files=["res://.godot/imported/road_crossroadLine.obj-c7c1b20fc6dcc22243a9db78fbc2aa34.mesh", "res://.godot/imported/road_crossroadLine.obj-c7c1b20fc6dcc22243a9db78fbc2aa34.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

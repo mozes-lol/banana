@@ -1,0 +1,405 @@
+[gd_scene load_steps=68 format=3 uid="uid://bxysnjfnnrkd5"]
+
+[ext_resource type="ArrayMesh" uid="uid://7tmo6x4qgx2n" path="res://assets/roads/bridge_pillar.obj" id="14_1h4ua"]
+[ext_resource type="ArrayMesh" uid="uid://de16wybh5wdpl" path="res://assets/roads/bridge_pillarWide.obj" id="15_ce0vf"]
+[ext_resource type="ArrayMesh" uid="uid://da6pk7qwflh3c" path="res://assets/roads/construction_barrier.obj" id="16_wdka6"]
+[ext_resource type="ArrayMesh" uid="uid://p8qp2l43lc7x" path="res://assets/roads/construction_light.obj" id="17_p0063"]
+[ext_resource type="ArrayMesh" uid="uid://bq1d6ns8v06rb" path="res://assets/roads/construction_pylon.obj" id="18_avl5t"]
+[ext_resource type="ArrayMesh" uid="uid://bgjy4fifh34yn" path="res://assets/roads/light_curved.obj" id="19_74uuj"]
+[ext_resource type="ArrayMesh" uid="uid://b3vfurkgb21ho" path="res://assets/roads/light_curvedCross.obj" id="20_bstlg"]
+[ext_resource type="ArrayMesh" uid="uid://c6cyhi7u4tjq3" path="res://assets/roads/light_curvedDouble.obj" id="21_4hgho"]
+[ext_resource type="ArrayMesh" uid="uid://dtgob8ceofgsd" path="res://assets/roads/light_square.obj" id="22_r3213"]
+[ext_resource type="ArrayMesh" uid="uid://vn3yh4674kxy" path="res://assets/roads/light_squareCross.obj" id="23_8ebfh"]
+[ext_resource type="ArrayMesh" uid="uid://c138dv3o85yxv" path="res://assets/roads/light_squareDouble.obj" id="24_o1mii"]
+[ext_resource type="ArrayMesh" uid="uid://b7ffpe5bdolyj" path="res://assets/roads/road_bend.obj" id="25_xf0lv"]
+[ext_resource type="ArrayMesh" uid="uid://bx81qpxvqmcyh" path="res://assets/roads/road_bendBarrier.obj" id="26_djo8e"]
+[ext_resource type="ArrayMesh" uid="uid://btfgpuc2w4oxb" path="res://assets/roads/road_bendSidewalk.obj" id="27_n1jj5"]
+[ext_resource type="ArrayMesh" uid="uid://cv55lb7f1i5cv" path="res://assets/roads/road_bendSquare.obj" id="28_1y0cy"]
+[ext_resource type="ArrayMesh" uid="uid://d10edpbpdqem2" path="res://assets/roads/road_bendSquareBarrier.obj" id="29_iucux"]
+[ext_resource type="ArrayMesh" uid="uid://ve05untdpvid" path="res://assets/roads/road_bridge.obj" id="30_6ui1n"]
+[ext_resource type="ArrayMesh" uid="uid://8kepm0rq1seu" path="res://assets/roads/road_crossing.obj" id="31_qysed"]
+[ext_resource type="ArrayMesh" uid="uid://balwsvxfhwn15" path="res://assets/roads/road_crossroad.obj" id="32_dup6i"]
+[ext_resource type="ArrayMesh" uid="uid://4e05dqsel11k" path="res://assets/roads/road_crossroadBarrier.obj" id="33_4ioue"]
+[ext_resource type="ArrayMesh" uid="uid://dqlkl3jtfa4qf" path="res://assets/roads/road_crossroadLine.obj" id="34_x8gnq"]
+[ext_resource type="ArrayMesh" uid="uid://bjxfx1bn0gk54" path="res://assets/roads/road_crossroadPath.obj" id="35_vovbr"]
+[ext_resource type="ArrayMesh" uid="uid://ftk1oxvhapge" path="res://assets/roads/road_curve.obj" id="36_pygbt"]
+[ext_resource type="ArrayMesh" uid="uid://c33l5ev62bhr8" path="res://assets/roads/road_curveBarrier.obj" id="37_o3mqu"]
+[ext_resource type="ArrayMesh" uid="uid://csn01a8tctj4s" path="res://assets/roads/road_curveIntersection.obj" id="38_ajbhy"]
+[ext_resource type="ArrayMesh" uid="uid://c3s40y66aicl5" path="res://assets/roads/road_curveIntersectionBarrier.obj" id="39_qmtaj"]
+[ext_resource type="ArrayMesh" uid="uid://r68thi4i5y7g" path="res://assets/roads/road_curvePavement.obj" id="40_nn6s0"]
+[ext_resource type="ArrayMesh" uid="uid://58r47oymkllk" path="res://assets/roads/road_drivewayDouble.obj" id="41_nx2uy"]
+[ext_resource type="ArrayMesh" uid="uid://dajmh0wqua7u4" path="res://assets/roads/road_drivewayDoubleBarrier.obj" id="42_x4lnj"]
+[ext_resource type="ArrayMesh" uid="uid://bokidnofqova7" path="res://assets/roads/road_drivewaySingle.obj" id="43_xj5px"]
+[ext_resource type="ArrayMesh" uid="uid://dq4wyt5i33quo" path="res://assets/roads/road_drivewaySingleBarrier.obj" id="44_ev78b"]
+[ext_resource type="ArrayMesh" uid="uid://c7s0c1adlh10r" path="res://assets/roads/road_end.obj" id="45_3chuu"]
+[ext_resource type="ArrayMesh" uid="uid://qxh5ixq0gw2r" path="res://assets/roads/road_endBarrier.obj" id="46_jnse6"]
+[ext_resource type="ArrayMesh" uid="uid://oyppi8q8rnvo" path="res://assets/roads/road_endRound.obj" id="47_l7aao"]
+[ext_resource type="ArrayMesh" uid="uid://bncosco5s77os" path="res://assets/roads/road_endRoundBarrier.obj" id="48_t1t2u"]
+[ext_resource type="ArrayMesh" uid="uid://xck2git0bspa" path="res://assets/roads/road_intersection.obj" id="49_rveqi"]
+[ext_resource type="ArrayMesh" uid="uid://dr86lnrtgw4yv" path="res://assets/roads/road_intersectionBarrier.obj" id="50_x667q"]
+[ext_resource type="ArrayMesh" uid="uid://ix1gx6oasjll" path="res://assets/roads/road_intersectionLine.obj" id="51_r02an"]
+[ext_resource type="ArrayMesh" uid="uid://c6gwhlasyltd" path="res://assets/roads/road_intersectionPath.obj" id="52_dkfrd"]
+[ext_resource type="ArrayMesh" uid="uid://cmr5n54y1ktvj" path="res://assets/roads/road_roundabout.obj" id="53_v44os"]
+[ext_resource type="ArrayMesh" uid="uid://cuc2068uslm76" path="res://assets/roads/road_roundaboutBarrier.obj" id="54_goigj"]
+[ext_resource type="ArrayMesh" uid="uid://dkilpywpkkdal" path="res://assets/roads/road_side.obj" id="55_gfnnx"]
+[ext_resource type="ArrayMesh" uid="uid://hxh5bgsqcovf" path="res://assets/roads/road_sideBarrier.obj" id="56_yxho4"]
+[ext_resource type="ArrayMesh" uid="uid://c72x1v8piefkj" path="res://assets/roads/road_sideEntry.obj" id="57_cvki8"]
+[ext_resource type="ArrayMesh" uid="uid://bp4q1fbd34btb" path="res://assets/roads/road_sideEntryBarrier.obj" id="58_igd20"]
+[ext_resource type="ArrayMesh" uid="uid://gsn86yuqh1hy" path="res://assets/roads/road_sideExit.obj" id="59_nx2vm"]
+[ext_resource type="ArrayMesh" uid="uid://yxl71lf0kre" path="res://assets/roads/road_sideExitBarrier.obj" id="60_fqv2e"]
+[ext_resource type="ArrayMesh" uid="uid://j4m5ijssuyk7" path="res://assets/roads/road_slant.obj" id="61_mp2pn"]
+[ext_resource type="ArrayMesh" uid="uid://bcs3lbfuvsxv8" path="res://assets/roads/road_slantBarrier.obj" id="62_2w1cx"]
+[ext_resource type="ArrayMesh" uid="uid://d2h2gxq6yvscs" path="res://assets/roads/road_slantCurve.obj" id="63_0iw4s"]
+[ext_resource type="ArrayMesh" uid="uid://blbegmp2a817p" path="res://assets/roads/road_slantCurveBarrier.obj" id="64_honp3"]
+[ext_resource type="ArrayMesh" uid="uid://gh4ggmx0newh" path="res://assets/roads/road_slantFlat.obj" id="65_cokox"]
+[ext_resource type="ArrayMesh" uid="uid://byoomiwuxc77b" path="res://assets/roads/road_slantFlatCurve.obj" id="66_oaba5"]
+[ext_resource type="ArrayMesh" uid="uid://ylhrm55rms" path="res://assets/roads/road_slantFlatHigh.obj" id="67_w6m0t"]
+[ext_resource type="ArrayMesh" uid="uid://bpix6otinsbx1" path="res://assets/roads/road_slantHigh.obj" id="68_5svnt"]
+[ext_resource type="ArrayMesh" uid="uid://bmm22cucdo6ld" path="res://assets/roads/road_slantHighBarrier.obj" id="69_wl6bl"]
+[ext_resource type="ArrayMesh" uid="uid://thmf8ncn68ga" path="res://assets/roads/road_split.obj" id="70_yqsn5"]
+[ext_resource type="ArrayMesh" uid="uid://dlvyhjm2r0wpo" path="res://assets/roads/road_splitBarrier.obj" id="71_3duwf"]
+[ext_resource type="ArrayMesh" uid="uid://2rfeqk1wfn7p" path="res://assets/roads/road_square.obj" id="72_78x1i"]
+[ext_resource type="ArrayMesh" uid="uid://b2ohirmj6qvny" path="res://assets/roads/road_squareBarrier.obj" id="73_l2tka"]
+[ext_resource type="ArrayMesh" uid="uid://b1ipxx4elu1i7" path="res://assets/roads/road_straight.obj" id="74_fikpx"]
+[ext_resource type="ArrayMesh" uid="uid://qd6v3ri66lvi" path="res://assets/roads/road_straightBarrier.obj" id="75_14muq"]
+[ext_resource type="ArrayMesh" uid="uid://c0aijjadjpgaq" path="res://assets/roads/road_straightBarrierEnd.obj" id="76_iybxn"]
+[ext_resource type="ArrayMesh" uid="uid://dtt8gr0j0s2" path="res://assets/roads/tile_high.obj" id="77_026br"]
+[ext_resource type="ArrayMesh" uid="uid://bms5pyl81ukmr" path="res://assets/roads/tile_low.obj" id="78_17pkf"]
+[ext_resource type="ArrayMesh" uid="uid://c2km5ujnibosf" path="res://assets/roads/tile_slant.obj" id="79_q1wto"]
+[ext_resource type="ArrayMesh" uid="uid://dqrhq6l6gpoae" path="res://assets/roads/tile_slantHigh.obj" id="80_xukl0"]
+
+[node name="roads_mesh_library" type="Node3D"]
+
+[node name="BridgePillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("14_1h4ua")
+
+[node name="BridgePillarWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("15_ce0vf")
+
+[node name="ConstructionBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("16_wdka6")
+
+[node name="ConstructionLight" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("17_p0063")
+
+[node name="ConstructionPylon" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("18_avl5t")
+
+[node name="LightCurved" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("19_74uuj")
+
+[node name="LightCurvedCross" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("20_bstlg")
+
+[node name="LightCurvedDouble" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("21_4hgho")
+
+[node name="LightSquare" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("22_r3213")
+
+[node name="LightSquareCross" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("23_8ebfh")
+
+[node name="LightSquareDouble" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("24_o1mii")
+
+[node name="RoadBend" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("25_xf0lv")
+
+[node name="RoadBendBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("26_djo8e")
+
+[node name="RoadBendSidewalk" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("27_n1jj5")
+
+[node name="RoadBendSquare" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("28_1y0cy")
+
+[node name="RoadBendSquareBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("29_iucux")
+
+[node name="RoadBridge" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("30_6ui1n")
+
+[node name="RoadCrossing" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("31_qysed")
+
+[node name="RoadCrossroad" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("32_dup6i")
+
+[node name="RoadCrossroadBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("33_4ioue")
+
+[node name="RoadCrossroadLine" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("34_x8gnq")
+
+[node name="RoadCrossroadPath" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("35_vovbr")
+
+[node name="RoadCurve" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.92, 0, 0)
+mesh = ExtResource("36_pygbt")
+
+[node name="RoadCurveBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("37_o3mqu")
+
+[node name="RoadCurveIntersection" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("38_ajbhy")
+
+[node name="RoadCurveIntersectionBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("39_qmtaj")
+
+[node name="RoadCurvePavement" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("40_nn6s0")
+
+[node name="RoadDrivewayDouble" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("41_nx2uy")
+
+[node name="RoadDrivewayDoubleBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("42_x4lnj")
+
+[node name="RoadDrivewaySingle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("43_xj5px")
+
+[node name="RoadDrivewaySingleBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("44_ev78b")
+
+[node name="RoadEnd" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("45_3chuu")
+
+[node name="RoadEndBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("46_jnse6")
+
+[node name="RoadEndRound" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("47_l7aao")
+
+[node name="RoadEndRoundBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("48_t1t2u")
+
+[node name="RoadIntersection" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("49_rveqi")
+
+[node name="RoadIntersectionBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("50_x667q")
+
+[node name="RoadIntersectionLine" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("51_r02an")
+
+[node name="RoadIntersectionPath" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("52_dkfrd")
+
+[node name="RoadRoundabout" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("53_v44os")
+
+[node name="RoadRoundaboutBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("54_goigj")
+
+[node name="RoadSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("55_gfnnx")
+
+[node name="RoadSideBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("56_yxho4")
+
+[node name="RoadSideEntry" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("57_cvki8")
+
+[node name="RoadSideEntryBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("58_igd20")
+
+[node name="RoadSideExit" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("59_nx2vm")
+
+[node name="RoadSideExitBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("60_fqv2e")
+
+[node name="RoadSlant" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("61_mp2pn")
+
+[node name="RoadSlantBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("62_2w1cx")
+
+[node name="RoadSlantCurve" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("63_0iw4s")
+
+[node name="RoadSlantCurveBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("64_honp3")
+
+[node name="RoadSlantFlat" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("65_cokox")
+
+[node name="RoadSlantFlatCurve" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("66_oaba5")
+
+[node name="RoadSlantFlatHigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("67_w6m0t")
+
+[node name="RoadSlantHigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("68_5svnt")
+
+[node name="RoadSlantHighBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("69_wl6bl")
+
+[node name="RoadSplit" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("70_yqsn5")
+
+[node name="RoadSplitBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("71_3duwf")
+
+[node name="RoadSquare" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("72_78x1i")
+
+[node name="RoadSquareBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("73_l2tka")
+
+[node name="RoadStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("74_fikpx")
+
+[node name="RoadStraightBarrier" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("75_14muq")
+
+[node name="RoadStraightBarrierEnd" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("76_iybxn")
+
+[node name="TileHigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("77_026br")
+
+[node name="TileLow" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("78_17pkf")
+
+[node name="TileSlant" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("79_q1wto")
+
+[node name="TileSlantHigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+visible = false
+mesh = ExtResource("80_xukl0")
