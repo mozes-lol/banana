@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2km5ujnibosf"
+path="res://.godot/imported/tile_slant.obj-8c8dffc40b7299c95d6508ef9366a836.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tile_slant.obj-8c8dffc40b7299c95d6508ef9366a836.mesh"]
+
+source_file="res://assets/roads/tile_slant.obj"
+dest_files=["res://.godot/imported/tile_slant.obj-8c8dffc40b7299c95d6508ef9366a836.mesh", "res://.godot/imported/tile_slant.obj-8c8dffc40b7299c95d6508ef9366a836.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmm22cucdo6ld"
+path="res://.godot/imported/road_slantHighBarrier.obj-20e7fef4344a5f52d9d195d6d92c65ba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_slantHighBarrier.obj-20e7fef4344a5f52d9d195d6d92c65ba.mesh"]
+
+source_file="res://assets/roads/road_slantHighBarrier.obj"
+dest_files=["res://.godot/imported/road_slantHighBarrier.obj-20e7fef4344a5f52d9d195d6d92c65ba.mesh", "res://.godot/imported/road_slantHighBarrier.obj-20e7fef4344a5f52d9d195d6d92c65ba.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

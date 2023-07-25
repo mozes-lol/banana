@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dr86lnrtgw4yv"
+path="res://.godot/imported/road_intersectionBarrier.obj-541d9361891f83ccf34d7d013c9db934.mesh"
+
+[deps]
+
+files=["res://.godot/imported/road_intersectionBarrier.obj-541d9361891f83ccf34d7d013c9db934.mesh"]
+
+source_file="res://assets/roads/road_intersectionBarrier.obj"
+dest_files=["res://.godot/imported/road_intersectionBarrier.obj-541d9361891f83ccf34d7d013c9db934.mesh", "res://.godot/imported/road_intersectionBarrier.obj-541d9361891f83ccf34d7d013c9db934.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
