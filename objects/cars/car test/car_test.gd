@@ -16,6 +16,7 @@ func get_input():
 		velocity = transform.basis.z * Input.get_axis("reverse", "forward") * speed
 	elif move_status == "no_move":
 		# vehicle does not move
+		velocity = Vector3.ZERO
 		pass
 
 func _physics_process(delta):
@@ -24,4 +25,4 @@ func _physics_process(delta):
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		print("I collided with ", collision.get_collider().name)
+		#print("I collided with ", collision.get_collider().name)
