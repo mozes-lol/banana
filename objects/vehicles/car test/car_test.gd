@@ -8,6 +8,7 @@ var rotation_direction = 0
 
 func _ready():
 	print("A new vehicle has been spawned.")
+	get_parent().markAsCurrentVehicle(get_node("."))
 
 func get_input():
 	rotation_direction = Input.get_axis("steer_right", "steer_left")
