@@ -1,7 +1,11 @@
 extends Node
 
+@export var vehiclePathnameList := []
 # This dictates which vehicle the game systems will focus on to.
-@onready var currentVehicle = get_node("/root/level_test_3d/car_test")
+var currentVehicle
 
 func _ready():
-	get_node("start_game_on_timer").initiateStartTimer()
+	var vehicleSpawn = load(vehiclePathnameList[0]).instantiate()
+	add_child(vehicleSpawn)
+	#get_node("start_game_on_timer").initiateStartTimer()
+	pass

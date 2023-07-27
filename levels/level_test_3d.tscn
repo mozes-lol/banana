@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=5 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="Script" path="res://levels/start_game_on_timer.gd" id="1_ier3h"]
-[ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
 [ext_resource type="Script" path="res://levels/level_controller.gd" id="1_qo4lv"]
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 
@@ -10,6 +9,7 @@
 
 [node name="level_controller" type="Node" parent="."]
 script = ExtResource("1_qo4lv")
+vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", null]
 
 [node name="start_game_on_timer" type="Node" parent="level_controller"]
 script = ExtResource("1_ier3h")
@@ -21,11 +21,6 @@ one_shot = true
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
 script = ExtResource("1_3kf58")
-
-[node name="car_test" parent="." instance=ExtResource("1_ivdo5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -44.2391, 0.0924471, 8.80699)
-speed = 15
-move_status = "no_move"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.35031, 0)

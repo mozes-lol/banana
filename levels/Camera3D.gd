@@ -5,8 +5,10 @@ var target
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	target = get_node("/root/level_test_3d/car_test")
+	#target = get_node("/root/level_test_3d/car_test")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	global_position = target.global_position + offsetToTarget
+	#global_position = target.global_position + offsetToTarget
+	pass
