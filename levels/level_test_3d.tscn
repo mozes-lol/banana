@@ -11,7 +11,7 @@ script = ExtResource("1_mtdk7")
 
 [node name="level_controller" type="Node" parent="."]
 script = ExtResource("1_qo4lv")
-vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", null]
+vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn"]
 
 [node name="start_game_on_timer" type="Node" parent="level_controller"]
 script = ExtResource("1_ier3h")

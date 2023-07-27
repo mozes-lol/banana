@@ -5,15 +5,19 @@ extends Node
 var currentVehicle
 
 func _ready():
+	roundStart()
+
+func roundStart():
 	var vehicleSpawn = load(vehiclePathnameList[0]).instantiate() # change the index later
 	add_child(vehicleSpawn)
 	get_node("start_game_on_timer").initiateStartTimer()
-	pass
 	
-	
+func roundSuccess():
+	currentVehicle.move_status = "no_move"
+	print("The vehicle has reached its destination.")
+
 func markAsCurrentVehicle(objectName):
 	currentVehicle = objectName
-	pass
 
 func updateCameraTarget():
 	get_node("/root/level_test_3d/level_controller/start_game_on_timer").target = currentVehicle

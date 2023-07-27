@@ -1,6 +1,9 @@
 extends StaticBody3D
 
+var level_controller
+
 func _ready():
+	level_controller = get_node("/root/level_test_3d/level_controller")
 	print("Destination has been spawned.")
 
 func _process(delta):
@@ -14,4 +17,4 @@ func _process(delta):
 func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	# It needs to be specified here that only the current vehicle is allowed to
 	# trigger this area.
-	print("Destination has been reached.")
+	level_controller.roundSuccess()

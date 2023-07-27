@@ -20,7 +20,8 @@ var rotation_direction = 0
 func _ready():
 	get_parent().markAsCurrentVehicle(get_node("."))
 	var destinationTriggerSpawn = destinationTrigger.instantiate() # change the index later
-	add_child(destinationTriggerSpawn)
+	destinationTriggerSpawn.global_position = destination_position
+	add_child(destinationTriggerSpawn) # change to a position automatically
 	print("A new vehicle has been spawned.")
 
 func get_input():
@@ -34,6 +35,7 @@ func get_input():
 		velocity = transform.basis.z * Input.get_axis("reverse", "forward") * speed
 	elif move_status == "no_move":
 		# vehicle does not move
+		rotation_direction = 0
 		velocity = Vector3.ZERO
 		pass
 
