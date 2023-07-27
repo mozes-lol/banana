@@ -10,12 +10,17 @@ const max_fuel = 100
 @export var fuel_consume_rate = 1
 # starting point and destination
 @export var starting_position = Vector3()
-#@export var destination = Vector3()
+@export var starting_rotation = Vector3()
+@export var destination_position = Vector3()
+@export var destination_rotation = Vector3()
 # others
 var rotation_direction = 0
+@onready var destinationTrigger = preload("res://objects/destination.tscn")
 
 func _ready():
 	get_parent().markAsCurrentVehicle(get_node("."))
+	var destinationTriggerSpawn = destinationTrigger.instantiate() # change the index later
+	add_child(destinationTriggerSpawn)
 	print("A new vehicle has been spawned.")
 
 func get_input():

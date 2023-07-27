@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=6 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="Script" path="res://levels/start_game_on_timer.gd" id="1_ier3h"]
+[ext_resource type="Script" path="res://levels/level_test_3d.gd" id="1_mtdk7"]
 [ext_resource type="Script" path="res://levels/level_controller.gd" id="1_qo4lv"]
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 
 [node name="level_test_3d" type="Node3D"]
+script = ExtResource("1_mtdk7")
 
 [node name="level_controller" type="Node" parent="."]
 script = ExtResource("1_qo4lv")
