@@ -10,13 +10,13 @@ const max_fuel = 100
 @export var fuel_consume_rate = 1
 # starting point and destination
 @export var starting_position = Vector3()
-@export var destination = Vector3()
+#@export var destination = Vector3()
 # others
 var rotation_direction = 0
 
 func _ready():
-	print("A new vehicle has been spawned.")
 	get_parent().markAsCurrentVehicle(get_node("."))
+	print("A new vehicle has been spawned.")
 
 func get_input():
 	if move_status == "auto":
