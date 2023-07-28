@@ -10,10 +10,11 @@ func _ready():
 func roundStart():
 	var vehicleSpawn = load(vehiclePathnameList[0]).instantiate() # change the index later
 	add_child(vehicleSpawn)
-	get_node("start_game_on_timer").initiateStartTimer()
+	get_node("timer_controller").initiateStartTimer()
 	
 func roundSuccess():
 	currentVehicle.move_status = "no_move"
+	get_node("timer_controller").initiateEndTimer()
 	print("The vehicle has reached its destination.")
 
 func markAsCurrentVehicle(objectName):

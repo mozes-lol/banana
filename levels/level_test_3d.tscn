@@ -13,10 +13,14 @@ script = ExtResource("1_mtdk7")
 script = ExtResource("1_qo4lv")
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn"]
 
-[node name="start_game_on_timer" type="Node" parent="level_controller"]
+[node name="timer_controller" type="Node" parent="level_controller"]
 script = ExtResource("1_ier3h")
 
-[node name="start_timer" type="Timer" parent="level_controller/start_game_on_timer"]
+[node name="start_timer" type="Timer" parent="level_controller/timer_controller"]
+wait_time = 3.0
+one_shot = true
+
+[node name="end_timer" type="Timer" parent="level_controller/timer_controller"]
 wait_time = 3.0
 one_shot = true
 
@@ -52,4 +56,5 @@ data = {
 "cells": PackedInt32Array(65527, 9, 1310792, 65528, 9, 524360, 65529, 9, 524360, 65530, 9, 524360, 65531, 9, 524360, 65532, 9, 524360, 65533, 9, 524360, 65534, 9, 524360, 65535, 9, 524360, 0, 9, 524360, 1, 9, 524360, 2, 9, 524360, 3, 9, 524360, 4, 9, 524360, 5, 9, 524360, 6, 9, 524360, 7, 9, 524360, 8, 9, 524360, 9, 9, 524360, 9, 8, 1310792, 9, 7, 1310792, 9, 6, 1310792, 9, 2, 1310792, 9, 3, 1310792, 9, 4, 1310792, 9, 5, 1310792, 9, 1, 1310792, 9, 0, 1310792, 9, 65535, 1310792, 9, 65534, 1310792, 9, 65533, 1310792, 9, 65532, 1310792, 9, 65531, 1310792, 9, 65530, 1310792, 9, 65529, 1310792, 9, 65528, 1310792, 9, 65527, 1310792, 8, 65527, 1310792, 7, 65527, 1310792, 6, 65527, 1310792, 5, 65527, 1310792, 4, 65527, 1310792, 3, 65527, 1310792, 2, 65527, 1310792, 1, 65527, 1310792, 65534, 65527, 1310792, 65535, 65527, 1310792, 0, 65527, 1310792, 65533, 65527, 1310792, 65532, 65527, 1310792, 65531, 65527, 1310792, 65530, 65527, 1310792, 65529, 65527, 1310792, 65528, 65527, 1310792, 65527, 65527, 1310792, 65527, 65528, 1310792, 65527, 65529, 1310792, 65527, 65530, 1310792, 65527, 65531, 1310792, 65527, 65532, 1310792, 65527, 65533, 1310792, 65527, 65534, 1310792, 65527, 65535, 1310792, 65527, 0, 1310792, 65527, 1, 1310792, 65527, 2, 1310792, 65527, 3, 1310792, 65527, 4, 1310792, 65527, 5, 1310792, 65527, 6, 1310792, 65527, 7, 1310792, 65527, 8, 1310792, 1, 7, 655397, 65533, 7, 655395, 65532, 5, 35, 65530, 4, 655395, 7, 65529, 35)
 }
 
-[connection signal="timeout" from="level_controller/start_game_on_timer/start_timer" to="level_controller/start_game_on_timer" method="_on_start_timer_timeout"]
+[connection signal="timeout" from="level_controller/timer_controller/start_timer" to="level_controller/timer_controller" method="_on_start_timer_timeout"]
+[connection signal="timeout" from="level_controller/timer_controller/end_timer" to="level_controller/timer_controller" method="_on_end_timer_timeout"]
