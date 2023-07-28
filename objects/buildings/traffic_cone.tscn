@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm8hqch02i4l"]
+
+[ext_resource type="ArrayMesh" uid="uid://bq1d6ns8v06rb" path="res://assets/roads/construction_pylon.obj" id="1_awdh2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bng8w"]
+height = 0.0975982
+radius = 0.0292179
+
+[node name="TrafficCone" type="StaticBody3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="ConstructionPylon" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00169265, 1.19209e-07, -0.000335142)
+mesh = ExtResource("1_awdh2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00188348, 0.0406252, 0)
+shape = SubResource("CylinderShape3D_bng8w")
