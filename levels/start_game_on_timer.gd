@@ -15,4 +15,4 @@ func _on_start_timer_timeout():
 	print("Go!")
 
 func _on_end_timer_timeout():
-	print("A new round is starting.")
+	parent.newRound()

@@ -8,6 +8,7 @@
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_71r77")
 move_status = "no_move"
+destination_position = Vector3(-10, 0, 0)
 
 [node name="Sedan" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_my58l")
