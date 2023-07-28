@@ -2,13 +2,14 @@ extends Node
 
 @export var vehiclePathnameList := []
 # This dictates which vehicle the game systems will focus on to.
+@export var vehiclePathnameListIndex = 0
 var currentVehicle
 
 func _ready():
 	roundStart()
 
 func roundStart():
-	var vehicleSpawn = load(vehiclePathnameList[0]).instantiate() # change the index later
+	var vehicleSpawn = load(vehiclePathnameList[vehiclePathnameListIndex]).instantiate()
 	add_child(vehicleSpawn)
 	get_node("timer_controller").initiateStartTimer()
 	
