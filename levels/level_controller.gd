@@ -4,7 +4,7 @@ extends Node
 
 @export_enum("Success", "Fail") var roundStatus = "Success"
 
-@onready var levelController = get_node("/root/SceneLoader")
+@onready var sceneLoader = get_node("/root/SceneLoader")
 
 @export var vehiclePathnameList := []
 # This dictates which vehicle the game systems will focus on to.
@@ -18,8 +18,11 @@ func _ready():
 func roundStart():
 	# Remove the current failed vehicle to make way for the new resetted one
 	if roundStatus == "Fail":
+		currentLives -= 1
 		currentVehicle.queue_free()
 		print("Removed previously failed vehicle")
+		if currentLives <= 0:
+			sceneLoader.goToMainMenu()
 	# Spawn vehicle
 	if vehiclePathnameList.size() - 1 >= vehiclePathnameListIndex:
 		var vehicleSpawn = load(vehiclePathnameList[vehiclePathnameListIndex]).instantiate()
@@ -27,7 +30,7 @@ func roundStart():
 		get_node("timer_controller").initiateStartTimer()
 		print("A new round is starting.")
 	else:
-		levelController.goToMainMenu()
+		sceneLoader.goToMainMenu()
 		print("All cars have already been driven.")
 	
 func roundSuccess():
@@ -41,7 +44,6 @@ func roundSuccess():
 func roundFail():
 	# Restart car and lose a life
 	roundStatus = "Fail"
-	currentLives -= 1
 	currentVehicle.move_status = "no_move"
 	get_node("timer_controller").initiateEndTimer()
 	print("The vehicle has crashed.")
