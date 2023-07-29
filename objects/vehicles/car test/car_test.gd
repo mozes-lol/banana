@@ -15,6 +15,8 @@ const max_fuel = 100
 @export var destination_rotation = Vector3()
 # others
 var rotation_direction = 0
+var has_crashed = false
+@onready var levelController = get_node("/root/level_test_3d/level_controller")
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
 func _ready():
@@ -49,4 +51,7 @@ func _physics_process(delta):
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		print("Vehicle collided with: ", collision.get_collider().name)
+		if has_crashed == false:
+			levelController.roundFail()
+			has_crashed = true
+			print("Vehicle collided with: ", collision.get_collider().name)
