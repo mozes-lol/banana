@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c4hoh1kswb7qt"]
+
+[node name="main_menu" type="Node"]
+
+[node name="ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="play" type="Button" parent="ui"]
+offset_left = 121.0
+offset_top = 234.0
+offset_right = 300.0
+offset_bottom = 301.0
+text = "play"
+
+[node name="play2" type="Button" parent="ui"]
+offset_left = 121.0
+offset_top = 340.0
+offset_right = 300.0
+offset_bottom = 407.0
+text = "Settings
+"
+
+[node name="play3" type="Button" parent="ui"]
+offset_left = 121.0
+offset_top = 446.0
+offset_right = 300.0
+offset_bottom = 513.0
+text = "Exit
+"

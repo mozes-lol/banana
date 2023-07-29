@@ -15,7 +15,7 @@ const max_fuel = 100
 @export var destination_rotation = Vector3()
 # others
 var rotation_direction = 0
-@onready var destinationTrigger = preload("res://objects/destination.tscn")
+@onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
 func _ready():
 	get_parent().markAsCurrentVehicle(get_node("."))
