@@ -23,6 +23,7 @@ func _ready():
 	get_parent().markAsCurrentVehicle(get_node("."))
 	var destinationTriggerSpawn = destinationTrigger.instantiate() # change the index later
 	destinationTriggerSpawn.global_position = destination_position
+	destinationTriggerSpawn.global_rotation = destination_rotation
 	add_child(destinationTriggerSpawn) # change to a position automatically
 	print("A new vehicle has been spawned.")
 

@@ -6,8 +6,11 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+collision_mask = 7
 script = ExtResource("1_jqbbd")
 move_status = "no_move"
+starting_position = Vector3(5, 0, 9)
+starting_rotation = Vector3(0, 180, 0)
 destination_position = Vector3(10, 0, 10)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
