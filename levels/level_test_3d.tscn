@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=20 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
@@ -16,6 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://bm8hqch02i4l" path="res://objects/buildings/traffic_cone.tscn" id="14_7b628"]
 [ext_resource type="PackedScene" uid="uid://cyj8nxum7tdef" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
+[ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
+albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
+albedo_texture = ExtResource("17_ns4wg")
+uv1_scale = Vector3(60, 60, 60)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wexiq"]
+material = SubResource("StandardMaterial3D_ayysn")
 
 [node name="level_test_3d" type="Node3D"]
 
@@ -1158,476 +1167,480 @@ transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.10251, 0, -2.95123)
 [node name="TrafficCone13" parent="level" instance=ExtResource("14_7b628")]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.23996, 0, -3.84117)
 
-[node name="Barrier" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 42.4519, 0, -19.6784)
+[node name="Barrier12" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 8.49038, 0, -3.93568)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8257, 0, -16.4847)
+[node name="StaticBody3D103" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.16514, 0, -3.29694)
 
-[node name="tree_big" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.2393, 0, -17.5623)
+[node name="tree_big210" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.24786, 0, -3.51246)
 
-[node name="tree_big2" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4075, 0, -20.466)
+[node name="tree_big211" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.2815, 0, -4.0932)
 
-[node name="StaticBody3D2" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0878, 0, -22.263)
+[node name="StaticBody3D104" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.41756, 0, -4.4526)
 
-[node name="tree_big3" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.3731, 0, -16.209)
+[node name="tree_big212" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.27462, 0, -3.2418)
 
-[node name="StaticBody3D3" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.4227, 0, -14.8053)
+[node name="StaticBody3D105" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.48454, 0, -2.96106)
 
-[node name="TrafficCone" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 45.3612, 0, -14.8323)
+[node name="TrafficCone12" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.07224, 0, -2.96646)
 
-[node name="TrafficCone2" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 47.9971, 0, -16.8065)
+[node name="TrafficCone14" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.59942, 0, -3.3613)
 
-[node name="TrafficCone3" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 47.2206, 4.76837e-07, -18.6819)
+[node name="TrafficCone15" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.44412, 9.53674e-08, -3.73638)
 
-[node name="Barrier2" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 42.3243, -4.76837e-07, -21.9066)
+[node name="Barrier13" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 8.46486, -9.53674e-08, -4.38132)
 
-[node name="Barrier3" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 35.5246, 0, -20.2924)
+[node name="Barrier14" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.10492, 0, -4.05848)
 
-[node name="tree_big4" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5839, 0, -21.1904)
+[node name="tree_big213" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.71678, 0, -4.23808)
 
-[node name="TrafficCone4" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 47.9951, 0, -19.8338)
+[node name="TrafficCone16" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.59902, 0, -3.96676)
 
-[node name="Barrier4" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 45.8232, 0, -19.6357)
+[node name="Barrier15" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 9.16464, 0, -3.92714)
 
-[node name="TrafficCone5" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 46.4248, 0, -21.1555)
+[node name="TrafficCone17" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.28496, 0, -4.2311)
 
-[node name="tree_big5" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3947, 0, -21.7759)
+[node name="tree_big214" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.47894, 0, -4.35518)
 
-[node name="Barrier5" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.4639, 0, -1.89212, 0, 7.7, 0, 1.89212, 0, 7.4639, 35.8289, -4.76837e-07, -26.1237)
+[node name="Barrier16" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.49278, 0, -0.378424, 0, 1.54, 0, 0.378424, 0, 1.49278, 7.16578, -9.53674e-08, -5.22474)
 
-[node name="Barrier6" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 35.9711, 4.76837e-07, -28.1478)
+[node name="Barrier17" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.19422, 9.53674e-08, -5.62956)
 
-[node name="TrafficCone6" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.9961, 0, -25.2762)
+[node name="TrafficCone18" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.39922, 0, -5.05524)
 
-[node name="TrafficCone7" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.2684, 0, -24.3533)
+[node name="TrafficCone19" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.25368, 0, -4.87066)
 
-[node name="TrafficCone8" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.8366, 0, -27.8277)
+[node name="TrafficCone20" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.56732, 0, -5.56554)
 
-[node name="tree_big6" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6827, 0, -26.8417)
+[node name="tree_big215" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.53654, 0, -5.36834)
 
-[node name="StaticBody3D4" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3661, -4.76837e-07, -26.2569)
+[node name="StaticBody3D106" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.27322, -9.53674e-08, -5.25138)
 
-[node name="tree_big7" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.7392, -4.76837e-07, -23.2685)
+[node name="tree_big216" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.14784, -9.53674e-08, -4.6537)
 
-[node name="Barrier7" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 36.0211, 0, -30.4656)
+[node name="Barrier18" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.20422, 0, -6.09312)
 
-[node name="TrafficCone9" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 35.9273, 0, -29.5881)
+[node name="TrafficCone21" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.18546, 0, -5.91762)
 
-[node name="Barrier8" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(6.48877, 0, 4.14559, 0, 7.7, 0, -4.14559, 0, 6.48877, 35.6537, 0, -31.0931)
+[node name="Barrier19" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.29775, 0, 0.829118, 0, 1.54, 0, -0.829118, 0, 1.29775, 7.13074, 0, -6.21862)
 
-[node name="Barrier9" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(0.838809, 0, 7.65418, 0, 7.7, 0, -7.65418, 0, 0.838809, 35.3885, 0, -30.6462)
+[node name="Barrier20" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(0.167762, 0, 1.53084, 0, 1.54, 0, -1.53084, 0, 0.167762, 7.0777, 0, -6.12924)
 
-[node name="TrafficCone10" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.5661, 0, -30.6022)
+[node name="TrafficCone22" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.51322, 0, -6.12044)
 
-[node name="tree_big8" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1139, 0, -31.9949)
+[node name="tree_big217" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.22278, 0, -6.39898)
 
-[node name="StaticBody3D5" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.1244, 0, -35.1612)
+[node name="StaticBody3D107" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.42488, 0, -7.03224)
 
-[node name="TrafficCone11" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 38.438, 0, -36.0428)
+[node name="TrafficCone23" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.6876, 0, -7.20856)
 
-[node name="tree_big9" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2087, 0, -36.7355)
+[node name="tree_big218" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.64174, 0, -7.3471)
 
-[node name="tree_big10" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9949, 0, -34.8818)
+[node name="tree_big219" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.79898, 0, -6.97636)
 
-[node name="StaticBody3D6" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0988, 0, -34.9579)
+[node name="StaticBody3D108" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.61976, 0, -6.99158)
 
-[node name="TrafficCone12" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 38.724, 0, -33.7501)
+[node name="TrafficCone24" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.7448, 0, -6.75002)
 
-[node name="TrafficCone13" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 39.5729, 0, -36.2245)
+[node name="TrafficCone25" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.91458, 0, -7.2449)
 
-[node name="TrafficCone14" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.7609, 0, -38.4813)
+[node name="TrafficCone26" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.35218, 0, -7.69626)
 
-[node name="TrafficCone15" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 39.4687, 0, -39.1806)
+[node name="TrafficCone27" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.89374, 0, -7.83612)
 
-[node name="TrafficCone16" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 38.8083, 0, -37.4298)
+[node name="TrafficCone28" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.76166, 0, -7.48596)
 
-[node name="TrafficCone17" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.9838, 0, -38.7759)
+[node name="TrafficCone29" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.59676, 0, -7.75518)
 
-[node name="TrafficCone18" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 35.7236, 0, -39.7407)
+[node name="TrafficCone30" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.14472, 0, -7.94814)
 
-[node name="TrafficCone19" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.3439, 0, -40.7768)
+[node name="TrafficCone31" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.46878, 0, -8.15536)
 
-[node name="TrafficCone20" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 39.1541, 0, -40.9805)
+[node name="TrafficCone32" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.83082, 0, -8.1961)
 
-[node name="TrafficCone21" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.4978, -2.38419e-07, -36.359)
+[node name="TrafficCone33" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.29956, -4.76838e-08, -7.2718)
 
-[node name="tree_big11" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2024, 2.38419e-07, -40.7887)
+[node name="tree_big220" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.64048, 4.76838e-08, -8.15774)
 
-[node name="Barrier10" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 36.5676, -2.38419e-07, -43.7876)
+[node name="Barrier21" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.31352, -4.76838e-08, -8.75752)
 
-[node name="Barrier11" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 36.6428, 0, -45.9053)
+[node name="Barrier22" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.32856, 0, -9.18106)
 
-[node name="Barrier12" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 36.6529, 2.38419e-07, -48.0794)
+[node name="Barrier23" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 7.33058, 4.76838e-08, -9.61588)
 
-[node name="TrafficCone22" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.7499, 0, -47.4522)
+[node name="TrafficCone34" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.54998, 0, -9.49044)
 
-[node name="TrafficCone23" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.889, 0, -48.3789)
+[node name="TrafficCone35" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.3778, 0, -9.67578)
 
-[node name="TrafficCone24" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.2371, 0, -47.1827)
+[node name="TrafficCone36" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.24742, 0, -9.43654)
 
-[node name="TrafficCone25" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.9978, -2.38419e-07, -46.0354)
+[node name="TrafficCone37" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.59956, -4.76838e-08, -9.20708)
 
-[node name="TrafficCone26" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 35.7014, 0, -44.1427)
+[node name="TrafficCone38" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.14028, 0, -8.82854)
 
-[node name="TrafficCone27" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.7546, 0, -45.5284)
+[node name="TrafficCone39" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.35092, 0, -9.10568)
 
-[node name="TrafficCone28" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 37.868, 0, -43.1419)
+[node name="TrafficCone40" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.5736, 0, -8.62838)
 
-[node name="tree_big12" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.166, 0, -46.8255)
+[node name="tree_big221" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.4332, 0, -9.3651)
 
-[node name="StaticBody3D7" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0104, 2.38419e-07, -46.3096)
+[node name="StaticBody3D109" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.20208, 4.76838e-08, -9.26192)
 
-[node name="tree_big13" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.8624, 0, -44.613)
+[node name="tree_big222" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.57248, 0, -8.9226)
 
-[node name="StaticBody3D8" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9818, 0, -43.065)
+[node name="StaticBody3D110" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.39636, 0, -8.613)
 
-[node name="tree_big14" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.933, 0, -37.8027)
+[node name="tree_big223" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.5866, 0, -7.56054)
 
-[node name="tree_big15" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.2755, 0, -40.1858)
+[node name="tree_big224" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.8551, 0, -8.03716)
 
-[node name="StaticBody3D9" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.9295, 0, -42.007)
+[node name="StaticBody3D111" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.3859, 0, -8.4014)
 
-[node name="StaticBody3D10" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6204, 0, -38.591)
+[node name="StaticBody3D112" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.12408, 0, -7.7182)
 
-[node name="TrafficCone29" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 35.894, 0, -41.3186)
+[node name="TrafficCone41" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 7.1788, 0, -8.26372)
 
-[node name="tree_big16" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.7049, -2.38419e-07, -40.6938)
+[node name="tree_big225" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.14098, -4.76838e-08, -8.13876)
 
-[node name="tree_big17" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5764, 0, -37.0332)
+[node name="tree_big226" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.11528, 0, -7.40664)
 
-[node name="tree_big18" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5316, 0, -45.2564)
+[node name="tree_big227" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.10632, 0, -9.05128)
 
-[node name="tree_big19" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.4455, 0, -48.2048)
+[node name="tree_big228" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 7.0891, 0, -9.64096)
 
-[node name="Barrier13" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 43.1332, 0, -24.7314)
+[node name="Barrier24" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 8.62664, 0, -4.94628)
 
-[node name="tree_big20" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.3951, 0, -23.5559)
+[node name="tree_big229" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.67902, 0, -4.71118)
 
-[node name="tree_big21" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.4984, 0, -22.5306)
+[node name="tree_big230" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.69968, 0, -4.50612)
 
-[node name="StaticBody3D11" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0957, 0, -24.0119)
+[node name="StaticBody3D113" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.41914, 0, -4.80238)
 
-[node name="tree_big22" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5719, 0, -25.9056)
+[node name="tree_big231" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.51438, 0, -5.18112)
 
-[node name="StaticBody3D12" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5296, 0, -26.2858)
+[node name="StaticBody3D114" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.70592, 0, -5.25716)
 
-[node name="tree_big23" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.7851, 0, -26.2726)
+[node name="tree_big232" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.35702, 0, -5.25452)
 
-[node name="Barrier14" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 43.0561, 0, -27.4016)
+[node name="Barrier25" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 8.61122, 0, -5.48032)
 
-[node name="tree_big24" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5079, 0, -27.8277)
+[node name="tree_big233" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.30158, 0, -5.56554)
 
-[node name="StaticBody3D13" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.0104, 0, -28.1124)
+[node name="StaticBody3D115" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.60208, 0, -5.62248)
 
-[node name="tree_big25" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8759, 0, -29.7778)
+[node name="tree_big234" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.57518, 0, -5.95556)
 
-[node name="Barrier15" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 43.1921, 0, -29.979)
+[node name="Barrier26" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 8.63842, 0, -5.9958)
 
-[node name="Barrier16" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(6.57234, 0, -4.01177, 0, 7.7, 0, 4.01177, 0, 6.57234, 44.829, 9.53674e-07, -33.3406)
+[node name="Barrier27" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.31447, 0, -0.802354, 0, 1.54, 0, 0.802354, 0, 1.31447, 8.9658, 1.90735e-07, -6.66812)
 
-[node name="TrafficCone30" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 48.2309, 0, -31.6583)
+[node name="TrafficCone42" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.64618, 0, -6.33166)
 
-[node name="tree_big26" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.1742, 0, -33.639)
+[node name="tree_big235" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.63484, 0, -6.7278)
 
-[node name="StaticBody3D14" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1221, 0, -33.7794)
+[node name="StaticBody3D116" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 9.42442, 0, -6.75588)
 
-[node name="house_4" parent="." instance=ExtResource("9_kwxfv")]
-transform = Transform3D(-0.0227047, 0, -0.999742, 0, 1, 0, 0.999742, 0, -0.0227047, 48.7885, 0, -35.4967)
+[node name="house_28" parent="level" instance=ExtResource("9_kwxfv")]
+transform = Transform3D(-0.00454094, 0, -0.199948, 0, 0.2, 0, 0.199948, 0, -0.00454094, 9.7577, 0, -7.09934)
 
-[node name="house_8" parent="." instance=ExtResource("16_6ofqg")]
-transform = Transform3D(-0.999997, 0, -0.00246087, 0, 1, 0, 0.00246087, 0, -0.999997, 23.5943, 0, 11.8117)
+[node name="house_29" parent="level" instance=ExtResource("16_6ofqg")]
+transform = Transform3D(-0.199999, 0, -0.000492174, 0, 0.2, 0, 0.000492174, 0, -0.199999, 4.71886, 0, 2.36234)
 
-[node name="house_1" parent="." instance=ExtResource("4_gbynp")]
-transform = Transform3D(0.999997, 0, -0.00263544, 0, 1, 0, 0.00263544, 0, 0.999997, 18.8897, 0, 9.6301)
+[node name="house_30" parent="level" instance=ExtResource("4_gbynp")]
+transform = Transform3D(0.199999, 0, -0.000527088, 0, 0.2, 0, 0.000527088, 0, 0.199999, 3.77794, 0, 1.92602)
 
-[node name="house_2" parent="." instance=ExtResource("6_4crws")]
-transform = Transform3D(0.00802837, 0, 0.999968, 0, 1, 0, -0.999968, 0, 0.00802837, 10.2278, 0, 4.35676)
+[node name="house_31" parent="level" instance=ExtResource("6_4crws")]
+transform = Transform3D(0.00160567, 0, 0.199994, 0, 0.2, 0, -0.199994, 0, 0.00160567, 2.04556, 0, 0.871352)
 
-[node name="house_5" parent="." instance=ExtResource("9_kwxfv")]
-transform = Transform3D(0.0031241, -2.93297e-05, 0.999995, -0.00115145, 0.999999, 3.2927e-05, -0.999994, -0.00115154, 0.00312406, 7.12455, 0, -6.58449)
+[node name="house_32" parent="level" instance=ExtResource("9_kwxfv")]
+transform = Transform3D(0.00062482, -5.86594e-06, 0.199999, -0.00023029, 0.2, 6.5854e-06, -0.199999, -0.000230308, 0.000624812, 1.42491, 0, -1.3169)
 
-[node name="house_6" parent="." instance=ExtResource("12_cfr6b")]
-transform = Transform3D(0.000575976, 0, -1, 0, 1, 0, 1, 0, 0.000575976, 24.8285, 0, 3.67984)
+[node name="house_33" parent="level" instance=ExtResource("12_cfr6b")]
+transform = Transform3D(0.000115195, 0, -0.2, 0, 0.2, 0, 0.2, 0, 0.000115195, 4.9657, 0, 0.735968)
 
-[node name="house_7" parent="." instance=ExtResource("11_qhu0p")]
-transform = Transform3D(0.00532075, 0.0535556, 0.999522, -0.000285088, 0.999536, -0.0535548, -1.00096, 0, 0.00532839, 24.7479, 0, -3.3098)
+[node name="house_34" parent="level" instance=ExtResource("11_qhu0p")]
+transform = Transform3D(0.00106415, 0.0107111, 0.199904, -5.70176e-05, 0.199907, -0.010711, -0.200192, 0, 0.00106568, 4.94958, 0, -0.66196)
 
-[node name="house_9" parent="." instance=ExtResource("12_cfr6b")]
-transform = Transform3D(0.00794112, 0, -0.999968, 0, 1, 0, 0.999968, 0, 0.00794112, 24.8227, 0, -10.5418)
+[node name="house_35" parent="level" instance=ExtResource("12_cfr6b")]
+transform = Transform3D(0.00158822, 0, -0.199994, 0, 0.2, 0, 0.199994, 0, 0.00158822, 4.96454, 0, -2.10836)
 
-[node name="house_10" parent="." instance=ExtResource("9_kwxfv")]
-transform = Transform3D(-0.0095817, 0, -0.999954, 0, 1, 0, 0.999954, 0, -0.0095817, 27.9551, 0, -14.2595)
+[node name="house_36" parent="level" instance=ExtResource("9_kwxfv")]
+transform = Transform3D(-0.00191634, 0, -0.199991, 0, 0.2, 0, 0.199991, 0, -0.00191634, 5.59102, 0, -2.8519)
 
-[node name="house_3" parent="." instance=ExtResource("13_04dau")]
-transform = Transform3D(0.00706849, 0, -0.999975, 0, 1, 0, 0.999975, 0, 0.00706849, 25.5729, 0, -25.7446)
+[node name="house_37" parent="level" instance=ExtResource("13_04dau")]
+transform = Transform3D(0.0014137, 0, -0.199995, 0, 0.2, 0, 0.199995, 0, 0.0014137, 5.11458, 0, -5.14892)
 
-[node name="house_11" parent="." instance=ExtResource("6_4crws")]
-transform = Transform3D(-0.00539293, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00539293, 24.7713, 0, -34.086)
+[node name="house_38" parent="level" instance=ExtResource("6_4crws")]
+transform = Transform3D(-0.00107859, 0, -0.199997, 0, 0.2, 0, 0.199997, 0, -0.00107859, 4.95426, 0, -6.8172)
 
-[node name="house_12" parent="." instance=ExtResource("13_04dau")]
-transform = Transform3D(-0.0339402, 0, -0.999424, 0, 1, 0, 0.999424, 0, -0.0339402, 25.6623, -4.76837e-07, -42.4264)
+[node name="house_39" parent="level" instance=ExtResource("13_04dau")]
+transform = Transform3D(-0.00678804, 0, -0.199885, 0, 0.2, 0, 0.199885, 0, -0.00678804, 5.13246, -9.53674e-08, -8.48528)
 
-[node name="house_13" parent="." instance=ExtResource("9_kwxfv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8907, 0, -48.9825)
+[node name="house_40" parent="level" instance=ExtResource("9_kwxfv")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 4.17814, 0, -9.7965)
 
-[node name="house_14" parent="." instance=ExtResource("4_gbynp")]
-transform = Transform3D(1, 0, 0, 0, 0.999856, -0.0169638, 0, 0.0169638, 0.999856, 13.7278, 0, -49.0183)
+[node name="house_41" parent="level" instance=ExtResource("4_gbynp")]
+transform = Transform3D(0.2, 0, 0, 0, 0.199971, -0.00339276, 0, 0.00339276, 0.199971, 2.74556, 0, -9.80366)
 
-[node name="house_15" parent="." instance=ExtResource("12_cfr6b")]
-transform = Transform3D(0.0135782, 0, 0.999908, 0, 1, 0, -0.999908, 0, 0.0135782, 10.2041, 4.76837e-07, -38.452)
+[node name="house_42" parent="level" instance=ExtResource("12_cfr6b")]
+transform = Transform3D(0.00271564, 0, 0.199982, 0, 0.2, 0, -0.199982, 0, 0.00271564, 2.04082, 9.53674e-08, -7.6904)
 
-[node name="house_16" parent="." instance=ExtResource("9_kwxfv")]
-transform = Transform3D(0.000785425, 0, 1, 0, 1, 0, -1, 0, 0.000785425, 7.09971, -2.38419e-07, -34.3951)
+[node name="house_43" parent="level" instance=ExtResource("9_kwxfv")]
+transform = Transform3D(0.000157085, 0, 0.2, 0, 0.2, 0, -0.2, 0, 0.000157085, 1.41994, -4.76838e-08, -6.87902)
 
-[node name="TrafficCone31" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 7.50168, 0, -27.435)
+[node name="TrafficCone43" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.50034, 0, -5.487)
 
-[node name="tree_big27" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20659, 0, -27.0103)
+[node name="tree_big236" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.84132, 0, -5.40206)
 
-[node name="tree_big28" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.73087, 0, -26.0549)
+[node name="tree_big237" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.54617, 0, -5.21098)
 
-[node name="StaticBody3D15" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.16225, 0, -25.4929)
+[node name="StaticBody3D117" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.83245, 0, -5.09858)
 
-[node name="tree_big29" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5694, 0, -24.6161)
+[node name="tree_big238" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.11388, 0, -4.92322)
 
-[node name="StaticBody3D16" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1529, 0, -26.6947)
+[node name="StaticBody3D118" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.23058, 0, -5.33894)
 
-[node name="tree_big30" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.72842, 4.76837e-07, -23.778)
+[node name="tree_big239" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.54568, 9.53674e-08, -4.7556)
 
-[node name="tree_big31" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.54324, -4.76837e-07, -22.7956)
+[node name="tree_big240" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.90865, -9.53674e-08, -4.55912)
 
-[node name="StaticBody3D17" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.10984, 0, -21.9587)
+[node name="StaticBody3D119" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.62197, 0, -4.39174)
 
-[node name="tree_big32" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1351, 0, -23.0373)
+[node name="tree_big241" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.22702, 0, -4.60746)
 
-[node name="tree_big33" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.39471, 0, -21.3525)
+[node name="tree_big242" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.87894, 0, -4.2705)
 
-[node name="StaticBody3D18" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80688, 0, -20.3868)
+[node name="StaticBody3D120" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.56138, 0, -4.07736)
 
-[node name="tree_big34" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5342, 0, -20.5736)
+[node name="tree_big243" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.10684, 0, -4.11472)
 
-[node name="tree_big35" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.11301, 0, -19.2394)
+[node name="tree_big244" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.8226, 0, -3.84788)
 
-[node name="StaticBody3D19" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7609, 0, -18.4932)
+[node name="StaticBody3D121" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.15218, 0, -3.69864)
 
-[node name="tree_big36" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60648, 0, -19.0258)
+[node name="tree_big245" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.5213, 0, -3.80516)
 
-[node name="StaticBody3D20" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.03632, 0, -17.6244)
+[node name="StaticBody3D122" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.80726, 0, -3.52488)
 
-[node name="tree_big37" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.89119, 0, -17.454)
+[node name="tree_big246" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.57824, 0, -3.4908)
 
-[node name="tree_big38" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9676, 0, -16.6038)
+[node name="tree_big247" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.19352, 0, -3.32076)
 
-[node name="tree_big39" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2009, 0, -16.0213)
+[node name="tree_big248" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.84018, 0, -3.20426)
 
-[node name="tree_big40" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48558, 0, -15.805)
+[node name="tree_big249" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.49712, 0, -3.161)
 
-[node name="StaticBody3D21" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.46378, 0, -13.651)
+[node name="StaticBody3D123" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.69276, 0, -2.7302)
 
-[node name="tree_big41" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1309, 0, -12.5049)
+[node name="tree_big250" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.02618, 0, -2.50098)
 
-[node name="tree_big42" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0748, 4.76837e-07, -14.4108)
+[node name="tree_big251" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.01496, 9.53674e-08, -2.88216)
 
-[node name="tree_big43" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51279, 0, -12.2003)
+[node name="tree_big252" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.50256, 0, -2.44006)
 
-[node name="tree_big44" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71182, 0, -11.4669)
+[node name="tree_big253" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.74236, 0, -2.29338)
 
-[node name="StaticBody3D22" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6004, 0, -10.9628)
+[node name="StaticBody3D124" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.12008, 0, -2.19256)
 
-[node name="tree_big45" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.63218, 0, -10.2049)
+[node name="tree_big254" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.52644, 0, -2.04098)
 
-[node name="tree_big46" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.67613, 0, -7.73023)
+[node name="tree_big255" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.73523, 0, -1.54605)
 
-[node name="tree_big47" parent="." instance=ExtResource("3_duuc6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.29252, 0, -9.15557)
+[node name="tree_big256" parent="level" instance=ExtResource("3_duuc6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.8585, 0, -1.83111)
 
-[node name="StaticBody3D23" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.57, 0, -8.21053)
+[node name="StaticBody3D125" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2.114, 0, -1.64211)
 
-[node name="StaticBody3D24" parent="." instance=ExtResource("8_1apf1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6907, 0, -8.53409)
+[node name="StaticBody3D126" parent="level" instance=ExtResource("8_1apf1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 1.53814, 0, -1.70682)
 
-[node name="TrafficCone32" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 50.0203, 0, 20.1142)
+[node name="TrafficCone44" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.0041, 0, 4.02284)
 
-[node name="TrafficCone33" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 51.016, 0, 20.0734)
+[node name="TrafficCone45" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.2032, 0, 4.01468)
 
-[node name="Barrier17" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 49.2563, 0, 17.2772)
+[node name="Barrier28" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 9.85126, 0, 3.45544)
 
-[node name="Barrier18" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 49.2445, 0, 15.2763)
+[node name="Barrier29" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 9.8489, 0, 3.05526)
 
-[node name="TrafficCone34" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 52.0315, -2.38419e-07, 14.6523)
+[node name="TrafficCone46" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.4063, -4.76838e-08, 2.93046)
 
-[node name="TrafficCone35" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 51.9647, 0, 20.0557)
+[node name="TrafficCone47" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.3929, 0, 4.01114)
 
-[node name="TrafficCone36" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 52.0189, 0, 15.2193)
+[node name="TrafficCone48" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.4038, 0, 3.04386)
 
-[node name="Barrier19" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 49.2676, 0, 12.2908)
+[node name="Barrier30" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 9.85352, 0, 2.45816)
 
-[node name="Barrier20" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 49.2268, 0, 10.477)
+[node name="Barrier31" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 9.84536, 0, 2.0954)
 
-[node name="TrafficCone37" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 52.0331, 0, 10.2426)
+[node name="TrafficCone49" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.4066, 0, 2.04852)
 
-[node name="TrafficCone38" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 52.0328, 0, 9.62762)
+[node name="TrafficCone50" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.4066, 0, 1.92552)
 
-[node name="TrafficCone39" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 51.3351, 0, 9.56789)
+[node name="TrafficCone51" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.267, 0, 1.91358)
 
-[node name="TrafficCone40" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 50.6978, 0, 9.51314)
+[node name="TrafficCone52" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 10.1396, 0, 1.90263)
 
-[node name="TrafficCone41" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 49.9901, 0, 9.50155)
+[node name="TrafficCone53" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 9.99802, 0, 1.90031)
 
-[node name="TrafficCone42" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 5.96829, 0, -18.8447)
+[node name="TrafficCone54" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.19366, 0, -3.76894)
 
-[node name="TrafficCone43" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 5.20316, 0, -18.8747)
+[node name="TrafficCone55" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 1.04063, 0, -3.77494)
 
-[node name="TrafficCone44" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 4.21234, 0, -18.9278)
+[node name="TrafficCone56" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.842468, 0, -3.78556)
 
-[node name="Barrier21" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 0.917748, 0, -18.6497)
+[node name="Barrier32" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0.18355, 0, -3.72994)
 
-[node name="Barrier22" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 0.919594, 4.76837e-07, -15.9592)
+[node name="Barrier33" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0.183919, 9.53674e-08, -3.19184)
 
-[node name="Barrier23" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(7.7, 0, 0, 0, 7.7, 0, 0, 0, 7.7, 0.875182, 0, -13.5272)
+[node name="Barrier34" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0.175036, 0, -2.70544)
 
-[node name="TrafficCone45" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 3.6459, 0, -11.0719)
+[node name="TrafficCone57" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.72918, 0, -2.21438)
 
-[node name="TrafficCone46" parent="." instance=ExtResource("14_7b628")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 3.61292, 0, -10.3849)
+[node name="TrafficCone58" parent="level" instance=ExtResource("14_7b628")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.722584, 0, -2.07698)
 
-[node name="Barrier24" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(0.0985054, 0, -7.69937, 0, 7.7, 0, 7.69937, 0, 0.0985054, 5.42398, 0, -12.503)
+[node name="Barrier35" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(0.0197011, 0, -1.53987, 0, 1.54, 0, 1.53987, 0, 0.0197011, 1.0848, 0, -2.5006)
 
-[node name="Barrier25" parent="." instance=ExtResource("14_x8k2i")]
-transform = Transform3D(-0.0353444, 0, -7.69992, 0, 7.7, 0, 7.69992, 0, -0.0353444, 7.26942, 0, -12.5098)
+[node name="Barrier36" parent="level" instance=ExtResource("14_x8k2i")]
+transform = Transform3D(-0.00706888, 0, -1.53998, 0, 1.54, 0, 1.53998, 0, -0.00706888, 1.45388, 0, -2.50196)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, 120, 0, 0, 0, 120, 0, 0, 0)
+mesh = SubResource("PlaneMesh_wexiq")
