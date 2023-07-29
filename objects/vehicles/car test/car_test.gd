@@ -15,11 +15,13 @@ const max_fuel = 100
 @export var destination_rotation = Vector3()
 # others
 var rotation_direction = 0
+var has_moved = false
 var has_crashed = false
 @onready var levelController = get_node("/root/level_test_3d/level_controller")
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
 func _ready():
+	moveToStartingPosition()
 	get_parent().markAsCurrentVehicle(get_node("."))
 	var destinationTriggerSpawn = destinationTrigger.instantiate() # change the index later
 	destinationTriggerSpawn.global_position = destination_position
@@ -56,3 +58,7 @@ func _physics_process(delta):
 			levelController.roundFail()
 			has_crashed = true
 			print("Vehicle collided with: ", collision.get_collider().name)
+
+func moveToStartingPosition():
+	position = starting_position
+	rotation = starting_rotation

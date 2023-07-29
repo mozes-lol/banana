@@ -1,6 +1,7 @@
 extends StaticBody3D
 
 var level_controller
+var current_vehicle
 
 func _ready():
 	level_controller = get_node("/root/level_test_3d/level_controller")
@@ -17,4 +18,5 @@ func _process(delta):
 func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	# It needs to be specified here that only the current vehicle is allowed to
 	# trigger this area.
-	level_controller.roundSuccess()
+	if (get_node("/root/level_test_3d/level_controller").currentVehicle.move_status == "auto"):
+		level_controller.roundSuccess()
