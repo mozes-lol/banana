@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
-[ext_resource type="PackedScene" uid="uid://l7yka1wf5kwp" path="res://objects/cars/car test/car_test.tscn" id="1_ivdo5"]
+[ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 [ext_resource type="PackedScene" uid="uid://d3spggtia0ix2" path="res://objects/buildings/tree_big.tscn" id="3_duuc6"]
 [ext_resource type="PackedScene" uid="uid://b2us4hcr47u6k" path="res://objects/buildings/house_1.tscn" id="4_gbynp"]
@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cdv1dglupjnqi" path="res://objects/buildings/house_6.tscn" id="11_qhu0p"]
 [ext_resource type="PackedScene" uid="uid://byw3ae3m0armj" path="res://objects/buildings/house_5.tscn" id="12_cfr6b"]
 [ext_resource type="PackedScene" uid="uid://dk4o7dwrcylw8" path="res://objects/buildings/house_3.tscn" id="13_04dau"]
-[ext_resource type="PackedScene" uid="uid://bm8hqch02i4l" path="res://objects/buildings/traffic_cone.tscn" id="14_7b628"]
-[ext_resource type="PackedScene" uid="uid://cyj8nxum7tdef" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
+[ext_resource type="PackedScene" path="res://objects/buildings/traffic_cone.tscn" id="14_7b628"]
+[ext_resource type="PackedScene" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 
@@ -28,13 +28,11 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [node name="level_test_3d" type="Node3D"]
 
+[node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
 script = ExtResource("1_3kf58")
-
-[node name="car_test" parent="." instance=ExtResource("1_ivdo5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -44.2391, 0.0924471, 8.80699)
-rotation_speed = 3.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.35031, 0)
