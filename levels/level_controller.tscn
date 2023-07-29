@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh2ftih4bm4ed"]
+
+[ext_resource type="Script" path="res://levels/level_controller.gd" id="1_w124f"]
+[ext_resource type="Script" path="res://levels/start_game_on_timer.gd" id="2_qmffv"]
+
+[node name="level_controller" type="Node"]
+script = ExtResource("1_w124f")
+vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn"]
+
+[node name="timer_controller" type="Node" parent="."]
+script = ExtResource("2_qmffv")
+
+[node name="start_timer" type="Timer" parent="timer_controller"]
+wait_time = 3.0
+one_shot = true
+
+[node name="end_timer" type="Timer" parent="timer_controller"]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="timer_controller/start_timer" to="timer_controller" method="_on_start_timer_timeout"]
+[connection signal="timeout" from="timer_controller/end_timer" to="timer_controller" method="_on_end_timer_timeout"]
