@@ -1,5 +1,7 @@
 extends Node
 
+@onready var levelController = get_node("/root/SceneLoader")
+
 @export var vehiclePathnameList := []
 # This dictates which vehicle the game systems will focus on to.
 @export var vehiclePathnameListIndex = 0
@@ -16,6 +18,7 @@ func roundStart():
 		get_node("timer_controller").initiateStartTimer()
 		print("A new round is starting.")
 	else:
+		levelController.goToMainMenu()
 		print("All cars have already been driven.")
 	
 func roundSuccess():

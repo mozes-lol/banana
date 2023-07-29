@@ -15,6 +15,10 @@ run/main_scene="res://levels/level_test_3d.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneLoader="*res://objects/scene loader/scene_loader.tscn"
+
 [input]
 
 steer_right={
