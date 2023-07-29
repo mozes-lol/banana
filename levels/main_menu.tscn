@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4hoh1kswb7qt"]
+
+[ext_resource type="Script" path="res://levels/main_menu.gd" id="1_kinek"]
+
+[node name="main_menu" type="Node"]
+script = ExtResource("1_kinek")
+
+[node name="ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="play" type="Button" parent="ui"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 234.0
+offset_right = 300.0
+offset_bottom = 301.0
+text = "play"
+
+[node name="play2" type="Button" parent="ui"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 340.0
+offset_right = 300.0
+offset_bottom = 407.0
+text = "Settings
+"
+
+[node name="play3" type="Button" parent="ui"]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 446.0
+offset_right = 300.0
+offset_bottom = 513.0
+text = "Exit
+"
+
+[connection signal="pressed" from="ui/play" to="." method="_on_play_pressed"]
