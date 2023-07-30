@@ -38,10 +38,12 @@ func roundStart():
 func roundSuccess():
 	# adds vehilce to vehicleReadyList
 	vehicleReadyList.append(currentVehicle)
+	currentVehicle.driving_status = "Replaying"
 	# Go to the next car
 	roundStatus = "Success"
 	vehiclePathnameListIndex += 1
 	currentVehicle.move_status = "no_move"
+	stopAllSubVehicles()
 	get_node("timer_controller").initiateEndTimer()
 	print("The vehicle has reached its destination.")
 
@@ -49,6 +51,7 @@ func roundFail():
 	# Restart car and lose a life
 	roundStatus = "Fail"
 	currentVehicle.move_status = "no_move"
+	stopAllSubVehicles()
 	get_node("timer_controller").initiateEndTimer()
 	print("The vehicle has crashed.")
 	pass
@@ -58,6 +61,14 @@ func newRound():
 
 func markAsCurrentVehicle(objectName):
 	currentVehicle = objectName
+
+func startAllSubVehicles():
+	for vehicle in vehicleReadyList:
+		vehicle.move_status = "auto"
+
+func stopAllSubVehicles():
+	for vehicle in vehicleReadyList:
+		vehicle.move_status = "no_move"
 
 func updateCameraTarget():
 	get_node("/root/level_test_3d/level_controller/start_game_on_timer").target = currentVehicle
