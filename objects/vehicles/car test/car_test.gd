@@ -98,3 +98,4 @@ func _physics_process(delta):
 func moveToStartingPosition():
 	position = starting_position
 	rotation = starting_rotation
+	frames = 0
