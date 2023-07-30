@@ -20,3 +20,4 @@ func _on_area_3d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 	# trigger this area.
 	if (get_node("/root/level_test_3d/level_controller").currentVehicle.move_status == "auto"):
 		level_controller.roundSuccess()
+	

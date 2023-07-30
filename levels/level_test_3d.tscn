@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cdv1dglupjnqi" path="res://objects/buildings/house_6.tscn" id="11_qhu0p"]
 [ext_resource type="PackedScene" uid="uid://byw3ae3m0armj" path="res://objects/buildings/house_5.tscn" id="12_cfr6b"]
 [ext_resource type="PackedScene" uid="uid://dk4o7dwrcylw8" path="res://objects/buildings/house_3.tscn" id="13_04dau"]
-[ext_resource type="PackedScene" path="res://objects/buildings/traffic_cone.tscn" id="14_7b628"]
-[ext_resource type="PackedScene" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
+[ext_resource type="PackedScene" uid="uid://bm8hqch02i4l" path="res://objects/buildings/traffic_cone.tscn" id="14_7b628"]
+[ext_resource type="PackedScene" uid="uid://cyj8nxum7tdef" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 
