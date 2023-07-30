@@ -13,6 +13,10 @@ const max_fuel = 100
 @export var starting_rotation = Vector3()
 @export var destination_position = Vector3()
 @export var destination_rotation = Vector3()
+# recording and replaying
+var replay = []
+var memory = {"L":0, "R":0}
+var frames = 0
 # others
 var rotation_direction = 0
 var has_moved = false
@@ -33,6 +37,16 @@ func _ready():
 	print("A new vehicle has been spawned.")
 
 func get_input():
+	if is_recording: # only record when the vehicle is moving
+		if Input.is_action_just_pressed("steer_left"):
+			memory.L = frames
+		if Input.is_action_just_pressed("steer_right"):
+			memory.R = frames
+		if Input.is_action_just_released("steer_left"):
+			replay.append({"key":"L", "startframe":memory.L, "endframe":frames})
+		if Input.is_action_just_released("steer_right"):
+			replay.append({"key":"R", "startframe":memory.R, "endframe":frames})
+		print(replay)
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
 		is_recording = true
