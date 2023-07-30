@@ -17,6 +17,9 @@ const max_fuel = 100
 var rotation_direction = 0
 var has_moved = false
 var has_crashed = false
+var is_recording = false # tells when the input should be recorded
+var is_replaying = false # dictates whether some vehicle systems should work or
+# let the replay system work for itself
 @onready var levelController = get_node("/root/level_test_3d/level_controller")
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
@@ -32,14 +35,17 @@ func _ready():
 func get_input():
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
+		is_recording = true
 		rotation_direction = Input.get_axis("steer_right", "steer_left")
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
+		is_recording = true
 		rotation_direction = Input.get_axis("steer_right", "steer_left")
 		velocity = transform.basis.z * Input.get_axis("reverse", "forward") * speed
 	elif move_status == "no_move":
-		# vehicle does not move
+		# vehicle does not move]
+		is_recording = false # not sure if I should keep this here
 		rotation_direction = 0
 		velocity = Vector3.ZERO
 		pass

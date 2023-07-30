@@ -29,8 +29,8 @@ func roundStart():
 	if vehiclePathnameList.size() - 1 >= vehiclePathnameListIndex:
 		var vehicleSpawn = load(vehiclePathnameList[vehiclePathnameListIndex]).instantiate()
 		add_child(vehicleSpawn)
-		get_node("timer_controller").initiateStartTimer()
 		print("A new round is starting.")
+		get_node("timer_controller").initiateStartTimer()
 	else:
 		sceneLoader.goToMainMenu()
 		print("All cars have already been driven.")
