@@ -16,9 +16,8 @@ const max_fuel = 100
 # recording and replaying
 var replay = []
 var memory = {"L":0, "R":0}
-var inputs = {"L":false, "R":false}
-var frames = 0
-@export var input = false
+@export var inputs = {"L":false, "R":false}
+@export var frames = 0
 # others
 var rotation_direction = 0
 var has_moved = false
@@ -55,10 +54,8 @@ func get_input():
 		for input in replay:
 			if input.startframe == frames:
 				inputs[input.key] = true
-				input = inputs[input.key] # testing
 			if input.endframe == frames:
 				inputs[input.key] = false
-				input = inputs[input.key] # testing
 				
 			print(input)
 	if move_status == "auto":
@@ -66,7 +63,7 @@ func get_input():
 		if is_replaying == false:
 			rotation_direction = Input.get_axis("steer_right", "steer_left")
 		else:
-			rotation_direction = Input.get_axis(inputs.R, inputs.L)
+			rotation_direction = Input.get_axis("steer_right", "steer_left")
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
