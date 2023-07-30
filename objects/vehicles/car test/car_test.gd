@@ -16,7 +16,9 @@ const max_fuel = 100
 # recording and replaying
 var replay = []
 var memory = {"L":0, "R":0}
+var inputs = {"L":false, "R":false}
 var frames = 0
+@export var input = false
 # others
 var rotation_direction = 0
 var has_moved = false
@@ -37,7 +39,8 @@ func _ready():
 	print("A new vehicle has been spawned.")
 
 func get_input():
-	if is_recording: # only record when the vehicle is moving
+	#	replay
+	if is_recording == true && is_replaying == false:
 		if Input.is_action_just_pressed("steer_left"):
 			memory.L = frames
 		if Input.is_action_just_pressed("steer_right"):
@@ -47,19 +50,30 @@ func get_input():
 		if Input.is_action_just_released("steer_right"):
 			replay.append({"key":"R", "startframe":memory.R, "endframe":frames})
 		print(replay)
+	# record
+	if is_recording == false && is_replaying == true:
+		for input in replay:
+			if input.startframe == frames:
+				inputs[input.key] = true
+				input = inputs[input.key] # testing
+			if input.endframe == frames:
+				inputs[input.key] = false
+				input = inputs[input.key] # testing
+				
+			print(input)
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
-		is_recording = true
-		rotation_direction = Input.get_axis("steer_right", "steer_left")
+		if is_replaying == false:
+			rotation_direction = Input.get_axis("steer_right", "steer_left")
+		else:
+			rotation_direction = Input.get_axis(inputs.R, inputs.L)
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
-		is_recording = true
 		rotation_direction = Input.get_axis("steer_right", "steer_left")
 		velocity = transform.basis.z * Input.get_axis("reverse", "forward") * speed
 	elif move_status == "no_move":
-		# vehicle does not move]
-		is_recording = false # not sure if I should keep this here
+		# vehicle does not move
 		rotation_direction = 0
 		velocity = Vector3.ZERO
 		pass
@@ -78,6 +92,7 @@ func _physics_process(delta):
 			levelController.roundFail()
 			has_crashed = true
 			print("Vehicle collided with: ", collision.get_collider().name)
+	frames += 1
 
 func moveToStartingPosition():
 	position = starting_position
