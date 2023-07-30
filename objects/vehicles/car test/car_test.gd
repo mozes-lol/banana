@@ -48,7 +48,6 @@ func get_input():
 			replay.append({"key":"L", "startframe":memory.L, "endframe":frames})
 		if Input.is_action_just_released("steer_right"):
 			replay.append({"key":"R", "startframe":memory.R, "endframe":frames})
-		print(replay)
 	# record
 	if is_recording == false && is_replaying == true:
 		for input in replay:
@@ -56,14 +55,19 @@ func get_input():
 				inputs[input.key] = true
 			if input.endframe == frames:
 				inputs[input.key] = false
-				
-			print(input)
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
-		if is_replaying == false:
+		if is_replaying == false: # not replaying
 			rotation_direction = Input.get_axis("steer_right", "steer_left")
 		else:
-			rotation_direction = Input.get_axis("steer_right", "steer_left")
+			if inputs["R"] && inputs["L"]:
+				rotation_direction = 0
+			elif inputs["R"] == true:
+				rotation_direction = -1
+			elif inputs["L"] == true:
+				rotation_direction = 1
+			else:
+				rotation_direction = 0
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
