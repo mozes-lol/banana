@@ -1,21 +1,23 @@
 extends Node
 
+# game variables
 @export var currentLives =  3
-
 @export_enum("Success", "Fail") var roundStatus = "Success"
-
-@onready var sceneLoader = get_node("/root/SceneLoader")
-
+# vehicle listing
 @export var vehiclePathnameList := []
-# This dictates which vehicle the game systems will focus on to.
 @export var vehiclePathnameListIndex = 0
-var currentVehicle
+var currentVehicle # This dictates which vehicle the game systems will focus on to.
+@export var vehicleReadyList := [] # For calling all vehicles to move/stop
+# onready
+@onready var sceneLoader = get_node("/root/SceneLoader")
 
 func _ready():
 	roundStart()
 	print(vehiclePathnameList.size())
 
 func roundStart():
+	for i in vehicleReadyList:
+		i.moveToStartingPosition()
 	# Remove the current failed vehicle to make way for the new resetted one
 	if roundStatus == "Fail":
 		currentLives -= 1
@@ -34,6 +36,8 @@ func roundStart():
 		print("All cars have already been driven.")
 	
 func roundSuccess():
+	# adds vehilce to vehicleReadyList
+	vehicleReadyList.append(currentVehicle)
 	# Go to the next car
 	roundStatus = "Success"
 	vehiclePathnameListIndex += 1
