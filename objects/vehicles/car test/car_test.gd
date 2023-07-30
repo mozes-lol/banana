@@ -22,9 +22,7 @@ var memory = {"L":0, "R":0}
 var rotation_direction = 0
 var has_moved = false
 var has_crashed = false
-var is_recording = false # tells when the input should be recorded
-var is_replaying = false # dictates whether some vehicle systems should work or
-# let the replay system work for itself
+@export_enum("Recording", "Replaying") var driving_status = "Recording" 
 @onready var levelController = get_node("/root/level_test_3d/level_controller")
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
@@ -39,7 +37,7 @@ func _ready():
 
 func get_input():
 	#	replay
-	if is_recording == true && is_replaying == false:
+	if driving_status == "Recording":
 		if Input.is_action_just_pressed("steer_left"):
 			memory.L = frames
 		if Input.is_action_just_pressed("steer_right"):
@@ -49,7 +47,7 @@ func get_input():
 		if Input.is_action_just_released("steer_right"):
 			replay.append({"key":"R", "startframe":memory.R, "endframe":frames})
 	# record
-	if is_recording == false && is_replaying == true:
+	if driving_status == "Replaying":
 		for input in replay:
 			if input.startframe == frames:
 				inputs[input.key] = true
@@ -57,7 +55,7 @@ func get_input():
 				inputs[input.key] = false
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
-		if is_replaying == false: # not replaying
+		if driving_status != "Replaying": # not replaying
 			rotation_direction = Input.get_axis("steer_right", "steer_left")
 		else:
 			if inputs["R"] && inputs["L"]:
@@ -88,11 +86,12 @@ func _physics_process(delta):
 	rotation.y += rotation_direction * rotation_speed * delta
 	move_and_slide()
 	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if has_crashed == false:
-			levelController.roundFail()
-			has_crashed = true
-			print("Vehicle collided with: ", collision.get_collider().name)
+		if driving_status != "Replaying":
+			var collision = get_slide_collision(i)
+			if has_crashed == false:
+				levelController.roundFail()
+				has_crashed = true
+				print("Vehicle collided with: ", collision.get_collider().name)
 	frames += 1
 
 func moveToStartingPosition():

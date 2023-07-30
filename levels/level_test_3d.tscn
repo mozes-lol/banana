@@ -29,6 +29,7 @@ material = SubResource("StandardMaterial3D_ayysn")
 [node name="level_test_3d" type="Node3D"]
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
+vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
