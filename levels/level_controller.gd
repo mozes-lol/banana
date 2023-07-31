@@ -18,6 +18,8 @@ func _ready():
 func roundStart():
 	for i in vehicleReadyList:
 		i.moveToStartingPosition()
+		# change collision layer from VehicleMain to VehicleSub
+		i.collision_mask = 8
 	# Remove the current failed vehicle to make way for the new resetted one
 	if roundStatus == "Fail":
 		currentLives -= 1
