@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqok40qn5sbbg"]
+[gd_scene load_steps=2 format=3 uid="uid://dnba0iayt00qn"]
 
-[ext_resource type="Script" path="res://objects/vehicles/car test/car_position_guide.gd" id="1_fxkcm"]
 [ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_pgt7h"]
 
-[node name="car_position_guide" type="CharacterBody3D"]
-collision_mask = 7
-script = ExtResource("1_fxkcm")
+[node name="car_position_guide" type="Node3D"]
 
 [node name="Truck" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_pgt7h")

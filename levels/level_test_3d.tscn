@@ -5,7 +5,7 @@
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 [ext_resource type="PackedScene" uid="uid://d3spggtia0ix2" path="res://objects/buildings/tree_big.tscn" id="3_duuc6"]
 [ext_resource type="PackedScene" uid="uid://b2us4hcr47u6k" path="res://objects/buildings/house_1.tscn" id="4_gbynp"]
-[ext_resource type="PackedScene" path="res://objects/vehicles/car test/car_position_guide.tscn" id="4_md8l2"]
+[ext_resource type="PackedScene" uid="uid://dnba0iayt00qn" path="res://objects/vehicles/car test/car_position_guide.tscn" id="4_md8l2"]
 [ext_resource type="PackedScene" uid="uid://c6glnxq6xrl1i" path="res://objects/buildings/house_2.tscn" id="6_4crws"]
 [ext_resource type="ArrayMesh" uid="uid://vn3yh4674kxy" path="res://assets/roads/light_squareCross.obj" id="7_gd0af"]
 [ext_resource type="PackedScene" uid="uid://c60qcep2gdqed" path="res://objects/buildings/tree_small.tscn" id="8_1apf1"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cyj8nxum7tdef" path="res://objects/buildings/Barrier_mamamo.tscn" id="14_x8k2i"]
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
-[ext_resource type="PackedScene" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
+[ext_resource type="PackedScene" uid="uid://bpt5ciqldfsc2" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -1902,6 +1902,7 @@ collision_layer = 2
 
 [node name="house_32" parent="level" instance=ExtResource("9_kwxfv")]
 transform = Transform3D(0.00062482, -5.86594e-06, 0.199999, -0.00023029, 0.2, 6.5854e-06, -0.199999, -0.000230308, 0.000624812, 1.42491, 0, -1.3169)
+visible = false
 collision_layer = 2
 
 [node name="house_33" parent="level" instance=ExtResource("12_cfr6b")]
