@@ -12,6 +12,7 @@ func initiateEndTimer():
 
 func _on_start_timer_timeout():
 	parent.currentVehicle.move_status = "auto"
+	parent.startAllSubVehicles()
 	print("Go!")
 
 func _on_end_timer_timeout():

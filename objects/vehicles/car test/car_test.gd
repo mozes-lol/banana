@@ -13,10 +13,16 @@ const max_fuel = 100
 @export var starting_rotation = Vector3()
 @export var destination_position = Vector3()
 @export var destination_rotation = Vector3()
+# recording and replaying
+var replay = []
+var memory = {"L":0, "R":0}
+@export var inputs = {"L":false, "R":false}
+@export var frames = 0
 # others
 var rotation_direction = 0
 var has_moved = false
 var has_crashed = false
+@export_enum("Recording", "Replaying") var driving_status = "Recording" 
 @onready var levelController = get_node("/root/level_test_3d/level_controller")
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
@@ -30,9 +36,36 @@ func _ready():
 	print("A new vehicle has been spawned.")
 
 func get_input():
+	#	replay
+	if driving_status == "Recording":
+		if Input.is_action_just_pressed("steer_left"):
+			memory.L = frames
+		if Input.is_action_just_pressed("steer_right"):
+			memory.R = frames
+		if Input.is_action_just_released("steer_left"):
+			replay.append({"key":"L", "startframe":memory.L, "endframe":frames})
+		if Input.is_action_just_released("steer_right"):
+			replay.append({"key":"R", "startframe":memory.R, "endframe":frames})
+	# record
+	if driving_status == "Replaying":
+		for input in replay:
+			if input.startframe == frames:
+				inputs[input.key] = true
+			if input.endframe == frames:
+				inputs[input.key] = false
 	if move_status == "auto":
 		# vehicle moves AUTOMATICALLY
-		rotation_direction = Input.get_axis("steer_right", "steer_left")
+		if driving_status != "Replaying": # not replaying
+			rotation_direction = Input.get_axis("steer_right", "steer_left")
+		else:
+			if inputs["R"] && inputs["L"]:
+				rotation_direction = 0
+			elif inputs["R"] == true:
+				rotation_direction = -1
+			elif inputs["L"] == true:
+				rotation_direction = 1
+			else:
+				rotation_direction = 0
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
@@ -53,12 +86,15 @@ func _physics_process(delta):
 	rotation.y += rotation_direction * rotation_speed * delta
 	move_and_slide()
 	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		if has_crashed == false:
-			levelController.roundFail()
-			has_crashed = true
-			print("Vehicle collided with: ", collision.get_collider().name)
+		if driving_status != "Replaying":
+			var collision = get_slide_collision(i)
+			if has_crashed == false:
+				levelController.roundFail()
+				has_crashed = true
+				print("Vehicle collided with: ", collision.get_collider().name)
+	frames += 1
 
 func moveToStartingPosition():
 	position = starting_position
 	rotation = starting_rotation
+	frames = 0

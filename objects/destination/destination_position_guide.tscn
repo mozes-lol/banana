@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdqipvxn21u0r"]
+
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_position_guide.gd" id="1_bve5h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0e8w3"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pxsnc"]
+
+[node name="destination" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_bve5h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.5, 0, 0, 0, 2, 0, 0, 0, 4.5, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_0e8w3")
+transparency = 0.75
+mesh = SubResource("BoxMesh_pxsnc")

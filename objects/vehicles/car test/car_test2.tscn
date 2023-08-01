@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://frjbtemiw6y1"]
+[gd_scene load_steps=4 format=3 uid="uid://c7npuvc48yfd6"]
 
-[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_71r77"]
-[ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_my58l"]
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_7gxdi"]
+[ext_resource type="ArrayMesh" uid="uid://b6pqqgtcnsd7n" path="res://assets/vehicles/truck.obj" id="2_sr6ka"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_71r77")
+collision_mask = 7
+script = ExtResource("1_7gxdi")
 move_status = "no_move"
-destination_position = Vector3(-10, 0, 0)
-
-[node name="Sedan" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_my58l")
+starting_position = Vector3(2, 0, -7)
+starting_rotation = Vector3(0, 180, 0)
+destination_position = Vector3(2, 0, 30)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2, 0, 0.582493, -0.0565104)
+transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.64, 0, 0.582493, -0.0565104)
 shape = SubResource("BoxShape3D_451pp")
+
+[node name="Truck" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_sr6ka")
