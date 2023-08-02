@@ -109,8 +109,6 @@ text = "Save"
 
 [node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_jd34c")
-bus = &"Music"
 
 [node name="AudioStreamPlayerEffects" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_bf3wd")
-bus = &"Effects"
