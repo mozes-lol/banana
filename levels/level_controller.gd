@@ -10,10 +10,13 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 @export var vehicleReadyList := [] # For calling all vehicles to move/stop
 # onready
 @onready var sceneLoader = get_node("/root/SceneLoader")
+@onready var fuelBar = get_node("/root/level_test_3d/ui/fuel_bar")
 
 func _ready():
-	roundStart()
-	print(vehiclePathnameList.size())
+	newRound()
+
+func _process(delta):
+	fuelBar.value = currentVehicle.current_fuel
 
 func roundStart():
 	for i in vehicleReadyList:
@@ -31,6 +34,7 @@ func roundStart():
 	if vehiclePathnameList.size() - 1 >= vehiclePathnameListIndex:
 		var vehicleSpawn = load(vehiclePathnameList[vehiclePathnameListIndex]).instantiate()
 		add_child(vehicleSpawn)
+		fuelBar.max_value = currentVehicle.max_fuel
 		print("A new round is starting.")
 		get_node("timer_controller").initiateStartTimer()
 	else:
@@ -59,6 +63,7 @@ func roundFail():
 
 func newRound():
 	roundStart()
+	fuelBar.max_value = currentVehicle.max_fuel
 
 func markAsCurrentVehicle(objectName):
 	currentVehicle = objectName

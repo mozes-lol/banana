@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var rotation_speed = 4.5
 @export_enum("auto", "manual", "no_move") var move_status = "auto" # useful for debugging
 # fuel
-@export var max_fuel = 10
+@export var max_fuel = 10.0
 @export var current_fuel = max_fuel
 @export var fuel_consume_rate = 1
 @export var is_draining_fuel = false
@@ -85,7 +85,7 @@ func _process(delta):
 	# consume fuel over time
 	if is_draining_fuel == true:
 		current_fuel -= fuel_consume_rate * delta
-	if current_fuel <= 0:
+	if current_fuel <= 0 && driving_status == "Recording":
 		if has_crashed == false:
 			levelController.roundFail()
 			has_crashed = true
