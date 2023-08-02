@@ -11,7 +11,7 @@ script = ExtResource("1_jqbbd")
 move_status = "no_move"
 starting_position = Vector3(5, 0, 9)
 starting_rotation = Vector3(0, 180, 0)
-destination_position = Vector3(10, 0, 10)
+destination_position = Vector3(-38.472, 0, -3.68)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, -0.0565104)
