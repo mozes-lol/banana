@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
-[ext_resource type="PackedScene" path="res://levels/level_controller.tscn" id="2_gjx61"]
+[ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 [ext_resource type="PackedScene" uid="uid://d3spggtia0ix2" path="res://objects/buildings/tree_big.tscn" id="3_duuc6"]
 [ext_resource type="PackedScene" uid="uid://b2us4hcr47u6k" path="res://objects/buildings/house_1.tscn" id="4_gbynp"]
