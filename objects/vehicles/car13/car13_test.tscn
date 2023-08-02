@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkw3ps704u1pq"]
+
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_0us27"]
+[ext_resource type="ArrayMesh" uid="uid://c8kixscleyvbd" path="res://assets/vehicles/ambulance.obj" id="2_dw3p8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
+size = Vector3(1, 0.74824, 1.09549)
+
+[node name="sedan" type="CharacterBody3D"]
+collision_mask = 7
+script = ExtResource("1_0us27")
+move_status = "no_move"
+starting_position = Vector3(-47.313, 0, -40.961)
+starting_rotation = Vector3(0, 78, 0)
+destination_position = Vector3(-23.857, 0, 11.514)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, -0.114379)
+shape = SubResource("BoxShape3D_451pp")
+
+[node name="Tractor" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_dw3p8")

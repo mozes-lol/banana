@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://btx12etoq5q6q"]
+
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_s4lax"]
+[ext_resource type="ArrayMesh" uid="uid://vyucuxbdlsmj" path="res://assets/vehicles/race.obj" id="2_rxt60"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
+size = Vector3(1, 0.74824, 0.778325)
+
+[node name="car" type="CharacterBody3D"]
+collision_mask = 7
+script = ExtResource("1_s4lax")
+speed = 20
+move_status = "no_move"
+starting_position = Vector3(-45.653, 0, -3.616)
+starting_rotation = Vector3(0, 190, 0)
+destination_position = Vector3(52.491, 0, -10.994)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, -0.0802402)
+shape = SubResource("BoxShape3D_451pp")
+
+[node name="Tractor" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_rxt60")
