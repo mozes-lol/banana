@@ -1,25 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://l7yka1wf5kwp"]
+[gd_scene load_steps=4 format=3 uid="uid://dxvntdq45586x"]
 
-[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_jqbbd"]
-[ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_1uxhj"]
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_3xvq3"]
+[ext_resource type="ArrayMesh" uid="uid://dv18o8a3m1jhb" path="res://assets/vehicles/raceFuture.obj" id="2_l3gqo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
+size = Vector3(0.871121, 1, 0.933115)
 
 [node name="CharacterBody3D2" type="CharacterBody3D"]
 collision_mask = 7
-script = ExtResource("1_jqbbd")
+script = ExtResource("1_3xvq3")
 move_status = "no_move"
 starting_position = Vector3(5, 0, 9)
-<<<<<<< HEAD
-destination_position = Vector3(10, 0, 10)
-=======
 starting_rotation = Vector3(0, 180, 0)
-destination_position = Vector3(-38.472, 0, -3.68)
->>>>>>> news-cars
+destination_position = Vector3(10, 0, 10)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, -0.0565104)
 shape = SubResource("BoxShape3D_451pp")
 
 [node name="Truck" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_1uxhj")
+mesh = ExtResource("2_l3gqo")
