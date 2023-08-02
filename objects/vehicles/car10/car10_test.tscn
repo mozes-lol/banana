@@ -10,9 +10,9 @@ size = Vector3(0.904692, 1.49622, 0.685326)
 collision_mask = 7
 script = ExtResource("1_jtmea")
 move_status = "no_move"
-starting_position = Vector3(5, 0, 9)
-starting_rotation = Vector3(0, 180, 0)
-destination_position = Vector3(10, 0, 10)
+starting_position = Vector3(-2.337, 0, -44.394)
+starting_rotation = Vector3(0, -80, 0)
+destination_position = Vector3(-8.431, 0, 37.563)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, 0.0710174)

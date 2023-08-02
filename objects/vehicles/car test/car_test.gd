@@ -5,9 +5,9 @@ extends CharacterBody3D
 @export var rotation_speed = 4.5
 @export_enum("auto", "manual", "no_move") var move_status = "auto" # useful for debugging
 # fuel
-@export var max_fuel = 10.0
+@export var max_fuel = 15.0
 @export var current_fuel = max_fuel
-@export var fuel_consume_rate = 1
+@export var fuel_consume_rate = 0.8
 @export var is_draining_fuel = false
 # starting point and destination
 @export var starting_position = Vector3()

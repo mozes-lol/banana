@@ -10,9 +10,9 @@ size = Vector3(0.886509, 1, 1)
 collision_mask = 7
 script = ExtResource("1_t6rp6")
 move_status = "no_move"
-starting_position = Vector3(5, 0, 9)
-starting_rotation = Vector3(0, 180, 0)
-destination_position = Vector3(-38.472, 0, -3.68)
+starting_position = Vector3(30.928, 0, -34.703)
+starting_rotation = Vector3(0, 78, 0)
+destination_position = Vector3(-45.543, 0, -35.518)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.2867, 0, 0.582493, -0.0565104)
