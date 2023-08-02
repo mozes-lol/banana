@@ -55,7 +55,6 @@ func roundFail():
 	currentVehicle.move_status = "no_move"
 	stopAllSubVehicles()
 	get_node("timer_controller").initiateEndTimer()
-	print("The vehicle has crashed.")
 	pass
 
 func newRound():

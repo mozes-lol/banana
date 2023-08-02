@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var rotation_speed = 4.5
 @export_enum("auto", "manual", "no_move") var move_status = "auto" # useful for debugging
 # fuel
-const max_fuel = 100
+@export var max_fuel = 10
 @export var current_fuel = max_fuel
 @export var fuel_consume_rate = 1
 # starting point and destination
@@ -77,10 +77,17 @@ func get_input():
 		velocity = Vector3.ZERO
 		pass
 
-func _physics_process(delta):
+func _process(delta):
 	# consume fuel over time
 	if move_status != "no_move":
 		current_fuel -= fuel_consume_rate * delta
+	if current_fuel <= 0:
+		if has_crashed == false:
+			levelController.roundFail()
+			has_crashed = true
+			print("The vehicle has lost all fuel.")
+
+func _physics_process(delta):
 	# vehicle's movement
 	get_input()
 	rotation.y += rotation_direction * rotation_speed * delta
@@ -91,6 +98,7 @@ func _physics_process(delta):
 			if has_crashed == false:
 				levelController.roundFail()
 				has_crashed = true
+				print("The vehicle has crashed.")
 				print("Vehicle collided with: ", collision.get_collider().name)
 	frames += 1
 
