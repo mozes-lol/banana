@@ -63,7 +63,7 @@ func roundFail():
 
 func newRound():
 	roundStart()
-	fuelBar.max_value = currentVehicle.max_fuel
+	fuelBar.max_value = currentVehicle.max_fuelaa
 
 func markAsCurrentVehicle(objectName):
 	currentVehicle = objectName
