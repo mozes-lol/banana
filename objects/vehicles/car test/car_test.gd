@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var max_fuel = 10
 @export var current_fuel = max_fuel
 @export var fuel_consume_rate = 1
+@export var is_draining_fuel = false
 # starting point and destination
 @export var starting_position = Vector3()
 @export var starting_rotation = Vector3()
@@ -54,6 +55,7 @@ func get_input():
 			if input.endframe == frames:
 				inputs[input.key] = false
 	if move_status == "auto":
+		is_draining_fuel = true
 		# vehicle moves AUTOMATICALLY
 		if driving_status != "Replaying": # not replaying
 			rotation_direction = Input.get_axis("steer_right", "steer_left")
@@ -68,10 +70,12 @@ func get_input():
 				rotation_direction = 0
 		velocity = transform.basis.z * speed
 	elif move_status == "manual":
+		is_draining_fuel = true
 		# vehicle moves MANUALLY (Press W or S to move forward or backward)
 		rotation_direction = Input.get_axis("steer_right", "steer_left")
 		velocity = transform.basis.z * Input.get_axis("reverse", "forward") * speed
 	elif move_status == "no_move":
+		is_draining_fuel = false
 		# vehicle does not move
 		rotation_direction = 0
 		velocity = Vector3.ZERO
@@ -79,7 +83,7 @@ func get_input():
 
 func _process(delta):
 	# consume fuel over time
-	if move_status != "no_move":
+	if is_draining_fuel == true:
 		current_fuel -= fuel_consume_rate * delta
 	if current_fuel <= 0:
 		if has_crashed == false:
