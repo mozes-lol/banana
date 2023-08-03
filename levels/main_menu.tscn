@@ -150,4 +150,5 @@ stream = ExtResource("5_yw4rm")
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
 [connection signal="value_changed" from="ui/settings/Panel/MarginContainer/VBoxContainer/master_volume" to="." method="_on_master_volume_value_changed"]
 [connection signal="value_changed" from="ui/settings/Panel/MarginContainer/VBoxContainer/music_volume" to="." method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="ui/settings/Panel/MarginContainer/VBoxContainer/sound_effects_volume" to="." method="_on_sound_effects_volume_value_changed"]
 [connection signal="pressed" from="ui/settings/Panel/MarginContainer/back_row/back" to="." method="_on_back_pressed"]

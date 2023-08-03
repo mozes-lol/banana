@@ -13,6 +13,8 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 @onready var fuelBar = get_node("/root/level_test_3d/ui/fuel_bar")
 
 @onready var audioStreamPlayerMusic: AudioStreamPlayer = $AudioStreamPlayerMusic
+@onready var crashSFX = get_node("/root/level_test_3d/Crash")
+
 var current_music_volume = 0
 
 func _ready():
@@ -60,6 +62,7 @@ func roundSuccess():
 
 func roundFail():
 	current_music_volume = AudioControl.get_music_bus_volume_linear()
+	crashSFX.play()
 	AudioControl.set_music_bus_volume_linear(0)
 	# Restart car and lose a life
 	roundStatus = "Fail"

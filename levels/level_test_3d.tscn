@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=24 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 [ext_resource type="PackedScene" uid="uid://bpt5ciqldfsc2" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
 [ext_resource type="AudioStream" uid="uid://c1ds4q7wi0spe" path="res://audio/jazz2.mp3" id="20_48gy4"]
+[ext_resource type="AudioStream" uid="uid://pxm6o3kynnmy" path="res://audio/crash.wav" id="21_8h2dr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -2185,16 +2186,17 @@ offset_bottom = 649.0
 
 [node name="fuel_bar" type="ProgressBar" parent="ui"]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -182.0
-offset_top = 588.96
+offset_top = -60.6
 offset_right = 182.0
-offset_bottom = -23.0397
+offset_bottom = -33.6
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 allow_greater = true
 allow_lesser = true
 
@@ -2202,3 +2204,7 @@ allow_lesser = true
 stream = ExtResource("20_48gy4")
 autoplay = true
 bus = &"Music"
+
+[node name="Crash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_8h2dr")
+bus = &"Sound Effects"

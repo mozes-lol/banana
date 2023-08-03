@@ -14,8 +14,7 @@ func _ready() -> void:
 	hSliderMusic.value = AudioControl.get_music_bus_volume_linear()
 	hSliderMusic.value = 1
 	hSliderEffects.value = AudioControl.get_effects_bus_volume_linear()
-	
-	
+	hSliderMusic.value = 1
 
 func _on_play_pressed():
 	sceneLoader.goToGame()
@@ -33,3 +32,6 @@ func _on_master_volume_value_changed(value: float) -> void:
 
 func _on_music_volume_value_changed(value: float) -> void:
 	AudioControl.set_music_bus_volume_linear(value)
+
+func _on_sound_effects_volume_value_changed(value: float) -> void:
+	AudioControl.set_effects_bus_volume_linear(value)
