@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=23 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 [ext_resource type="PackedScene" uid="uid://bpt5ciqldfsc2" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
+[ext_resource type="AudioStream" uid="uid://c1ds4q7wi0spe" path="res://audio/jazz2.mp3" id="20_48gy4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -2196,3 +2197,8 @@ grow_horizontal = 2
 grow_vertical = 2
 allow_greater = true
 allow_lesser = true
+
+[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_48gy4")
+autoplay = true
+bus = &"Music"

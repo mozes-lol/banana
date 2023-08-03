@@ -12,13 +12,18 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 @onready var sceneLoader = get_node("/root/SceneLoader")
 @onready var fuelBar = get_node("/root/level_test_3d/ui/fuel_bar")
 
+@onready var audioStreamPlayerMusic: AudioStreamPlayer = $AudioStreamPlayerMusic
+var current_music_volume = 0
+
 func _ready():
+	current_music_volume = AudioControl.get_music_bus_volume_linear()
 	newRound()
 
 func _process(delta):
 	fuelBar.value = currentVehicle.current_fuel
 
 func roundStart():
+	AudioControl.set_music_bus_volume_linear(current_music_volume)
 	for i in vehicleReadyList:
 		i.moveToStartingPosition()
 		# change collision layer from VehicleMain to VehicleSub
@@ -54,6 +59,8 @@ func roundSuccess():
 	print("The vehicle has reached its destination.")
 
 func roundFail():
+	current_music_volume = AudioControl.get_music_bus_volume_linear()
+	AudioControl.set_music_bus_volume_linear(0)
 	# Restart car and lose a life
 	roundStatus = "Fail"
 	currentVehicle.move_status = "no_move"
