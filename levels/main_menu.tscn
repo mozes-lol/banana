@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4hoh1kswb7qt"]
+[gd_scene load_steps=4 format=3 uid="uid://c4hoh1kswb7qt"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_kinek"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_233gf"]
+[ext_resource type="Script" path="res://levels/vehicleSpin.gd" id="2_8wonv"]
+[ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_lxnwy"]
 
 [node name="main_menu" type="Node3D"]
 script = ExtResource("1_kinek")
@@ -50,6 +50,7 @@ text = "Exit
 "
 
 [node name="settings" type="MarginContainer" parent="ui"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,6 +61,7 @@ theme_override_constants/margin_left = 387
 theme_override_constants/margin_top = 180
 theme_override_constants/margin_right = 387
 theme_override_constants/margin_bottom = 180
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="ui/settings"]
 layout_mode = 2
@@ -119,6 +121,9 @@ text = "Back
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.49985)
-mesh = SubResource("CylinderMesh_233gf")
+mesh = ExtResource("2_lxnwy")
+script = ExtResource("2_8wonv")
 
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ui/main_menu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="ui/settings/Panel/MarginContainer/back_row/back" to="." method="_on_back_pressed"]
