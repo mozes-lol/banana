@@ -1,4 +1,4 @@
-extends Node
+extends Node3D
 
 @onready var sceneLoader = get_node("/root/SceneLoader")
 

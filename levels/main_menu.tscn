@@ -1,40 +1,124 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4hoh1kswb7qt"]
+[gd_scene load_steps=3 format=3 uid="uid://c4hoh1kswb7qt"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_kinek"]
 
-[node name="main_menu" type="Node"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_233gf"]
+
+[node name="main_menu" type="Node3D"]
 script = ExtResource("1_kinek")
+
+[node name="Camera3D" type="Camera3D" parent="."]
 
 [node name="ui" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="play" type="Button" parent="ui"]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 234.0
-offset_right = 300.0
-offset_bottom = 301.0
-text = "play"
+[node name="main_menu" type="MarginContainer" parent="ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -896.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
 
-[node name="play2" type="Button" parent="ui"]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 340.0
-offset_right = 300.0
-offset_bottom = 407.0
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/main_menu"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 44
+
+[node name="play" type="Button" parent="ui/main_menu/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="settings" type="Button" parent="ui/main_menu/VBoxContainer"]
+layout_mode = 2
 text = "Settings
 "
 
-[node name="play3" type="Button" parent="ui"]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 446.0
-offset_right = 300.0
-offset_bottom = 513.0
+[node name="exit" type="Button" parent="ui/main_menu/VBoxContainer"]
+layout_mode = 2
 text = "Exit
 "
 
-[connection signal="pressed" from="ui/play" to="." method="_on_play_pressed"]
+[node name="settings" type="MarginContainer" parent="ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 387
+theme_override_constants/margin_top = 180
+theme_override_constants/margin_right = 387
+theme_override_constants/margin_bottom = 180
+
+[node name="Panel" type="Panel" parent="ui/settings"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/settings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/settings/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="master_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="master_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="music_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="music_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="sound_effects_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound Effect Volume"
+
+[node name="sound_effects_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="back_row" type="HBoxContainer" parent="ui/settings/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="back" type="Button" parent="ui/settings/Panel/MarginContainer/back_row"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 0
+text = "Back
+"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.49985)
+mesh = SubResource("CylinderMesh_233gf")
+
+[connection signal="pressed" from="ui/main_menu/VBoxContainer/play" to="." method="_on_play_pressed"]
