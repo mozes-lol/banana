@@ -32,7 +32,6 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn"]
-vehiclePathnameListIndex = 15
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
