@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4hoh1kswb7qt"]
+[gd_scene load_steps=6 format=3 uid="uid://c4hoh1kswb7qt"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_kinek"]
 [ext_resource type="Script" path="res://levels/vehicleSpin.gd" id="2_8wonv"]
 [ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_lxnwy"]
+[ext_resource type="AudioStream" uid="uid://bafbhq4hyrbxq" path="res://audio/jazz1.mp3" id="4_6xbo4"]
+[ext_resource type="AudioStream" uid="uid://bol5jcmh77yn5" path="res://audio/effect.mp3" id="5_yw4rm"]
 
 [node name="main_menu" type="Node3D"]
 script = ExtResource("1_kinek")
@@ -37,15 +39,18 @@ theme_override_constants/separation = 44
 
 [node name="play" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Play"
 
 [node name="settings" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Settings
 "
 
 [node name="exit" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Exit
 "
 
@@ -88,6 +93,9 @@ text = "Master Volume"
 [node name="master_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
 
 [node name="music_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -96,14 +104,20 @@ text = "Music Volume"
 [node name="music_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
 
 [node name="sound_effects_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sound Effect Volume"
+text = "Sound Effects Volume"
 
 [node name="sound_effects_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
 
 [node name="back_row" type="HBoxContainer" parent="ui/settings/Panel/MarginContainer"]
 layout_mode = 2
@@ -124,6 +138,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.49985)
 mesh = ExtResource("2_lxnwy")
 script = ExtResource("2_8wonv")
 
+[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6xbo4")
+autoplay = true
+bus = &"Music"
+
+[node name="AudioStreamPlayerEffects" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_yw4rm")
+
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="value_changed" from="ui/settings/Panel/MarginContainer/VBoxContainer/master_volume" to="." method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="ui/settings/Panel/MarginContainer/VBoxContainer/music_volume" to="." method="_on_music_volume_value_changed"]
 [connection signal="pressed" from="ui/settings/Panel/MarginContainer/back_row/back" to="." method="_on_back_pressed"]
