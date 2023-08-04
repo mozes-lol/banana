@@ -27,6 +27,9 @@ func _on_back_pressed() -> void:
 	get_node("/root/main_menu/ui/settings").hide()
 	get_node("/root/main_menu/ui/main_menu").show()
 
+func _on_exit_pressed() -> void:
+	get_tree().quit()
+
 func _on_master_volume_value_changed(value: float) -> void:
 	AudioControl.set_master_bus_volume_linear(value)
 

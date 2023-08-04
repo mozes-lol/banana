@@ -36,8 +36,9 @@ material = SubResource("StandardMaterial3D_ayysn")
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
+transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 19.375, 17.035)
 script = ExtResource("1_3kf58")
+offsetToTarget = Vector3(0, 19.375, 15.99)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.35031, 0)
@@ -48,6 +49,7 @@ mesh = SubResource("PlaneMesh_wexiq")
 
 [node name="car_position_guide" parent="." instance=ExtResource("4_md8l2")]
 transform = Transform3D(-0.0119902, 0, 0.999928, 0, 1, 0, -0.999928, 0, -0.0119902, -45.6526, 2.38419e-07, -3.61642)
+visible = false
 
 [node name="level" type="Node3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -2177,12 +2179,13 @@ collision_layer = 2
 
 [node name="destination" parent="." instance=ExtResource("19_vun8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4909, 1.43051e-06, -10.9937)
+visible = false
 
 [node name="ui" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1154.0
-offset_bottom = 649.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="fuel_bar" type="ProgressBar" parent="ui"]
 layout_mode = 1
@@ -2191,12 +2194,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -182.0
-offset_top = -60.6
-offset_right = 182.0
-offset_bottom = -33.6
+offset_left = -304.0
+offset_top = -80.0
+offset_right = 100.0
+offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 allow_greater = true
 allow_lesser = true
 
