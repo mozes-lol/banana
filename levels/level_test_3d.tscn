@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=28 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
@@ -22,6 +22,9 @@
 [ext_resource type="AudioStream" uid="uid://c1ds4q7wi0spe" path="res://audio/jazz2.mp3" id="20_48gy4"]
 [ext_resource type="FontFile" uid="uid://b1ns3y3xua8vb" path="res://assets/fonts/Roboto-Light.ttf" id="20_j3b44"]
 [ext_resource type="AudioStream" uid="uid://pxm6o3kynnmy" path="res://audio/crash.wav" id="21_8h2dr"]
+[ext_resource type="Script" path="res://levels/get_ready.gd" id="21_f35ir"]
+[ext_resource type="Texture2D" uid="uid://d4ibtuwd4m6vu" path="res://assets/fonts/heartFull.png" id="21_qre5a"]
+[ext_resource type="Script" path="res://levels/vehicleProgression.gd" id="23_andix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -2205,6 +2208,81 @@ scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("20_j3b44")
 allow_greater = true
 allow_lesser = true
+
+[node name="vehicleProgression" type="Label" parent="ui"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 21.755
+offset_right = 280.0
+offset_bottom = 96.755
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("20_j3b44")
+theme_override_font_sizes/font_size = 46
+text = "0 of 0 vehicles driven"
+horizontal_alignment = 1
+script = ExtResource("23_andix")
+
+[node name="get_ready" type="Panel" parent="ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("21_f35ir")
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/get_ready"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/get_ready/MarginContainer"]
+layout_mode = 2
+
+[node name="lives_left" type="Label" parent="ui/get_ready/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("20_j3b44")
+theme_override_font_sizes/font_size = 146
+text = "Lives Left"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/get_ready/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="heart1" type="TextureRect" parent="ui/get_ready/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("21_qre5a")
+
+[node name="heart2" type="TextureRect" parent="ui/get_ready/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("21_qre5a")
+
+[node name="heart3" type="TextureRect" parent="ui/get_ready/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("21_qre5a")
+
+[node name="get_ready" type="Label" parent="ui/get_ready/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("20_j3b44")
+theme_override_font_sizes/font_size = 101
+text = "Get Ready..."
+horizontal_alignment = 1
+
+[node name="timer" type="Label" parent="ui/get_ready/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("20_j3b44")
+theme_override_font_sizes/font_size = 171
+text = "0"
+horizontal_alignment = 1
 
 [node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_48gy4")

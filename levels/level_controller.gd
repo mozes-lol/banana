@@ -14,6 +14,7 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 
 @onready var audioStreamPlayerMusic: AudioStreamPlayer = $AudioStreamPlayerMusic
 @onready var crashSFX = get_node("/root/level_test_3d/Crash")
+@onready var getReadyUi = get_node("/root/level_test_3d/ui/get_ready")
 
 var current_music_volume = 0
 
@@ -25,6 +26,7 @@ func _process(delta):
 	fuelBar.value = currentVehicle.current_fuel
 
 func roundStart():
+	getReadyUi.enableGetReadyUI()
 	AudioControl.set_music_bus_volume_linear(current_music_volume)
 	for i in vehicleReadyList:
 		i.moveToStartingPosition()
