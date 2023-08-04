@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=25 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 [ext_resource type="PackedScene" uid="uid://bpt5ciqldfsc2" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
 [ext_resource type="AudioStream" uid="uid://c1ds4q7wi0spe" path="res://audio/jazz2.mp3" id="20_48gy4"]
+[ext_resource type="FontFile" uid="uid://b1ns3y3xua8vb" path="res://assets/fonts/Roboto-Light.ttf" id="20_j3b44"]
 [ext_resource type="AudioStream" uid="uid://pxm6o3kynnmy" path="res://audio/crash.wav" id="21_8h2dr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
@@ -2201,6 +2202,7 @@ offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("20_j3b44")
 allow_greater = true
 allow_lesser = true
 
