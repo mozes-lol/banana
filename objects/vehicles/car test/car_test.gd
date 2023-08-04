@@ -28,6 +28,7 @@ var has_crashed = false
 @onready var destinationTrigger = preload("res://objects/destination/destination.tscn")
 
 func _ready():
+	
 	moveToStartingPosition()
 	get_parent().markAsCurrentVehicle(get_node("."))
 	var destinationTriggerSpawn = destinationTrigger.instantiate() # change the index later

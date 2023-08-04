@@ -113,4 +113,3 @@ bus = &"Music"
 
 [node name="AudioStreamPlayerEffects" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_bf3wd")
-bus = &"Effects"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=24 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://dmccu2g0op7cu" path="res://objects/buildings/house_8.tscn" id="16_6ofqg"]
 [ext_resource type="Texture2D" uid="uid://na37c25k765l" path="res://assets/ground/O5NY920.jpg" id="17_ns4wg"]
 [ext_resource type="PackedScene" uid="uid://bpt5ciqldfsc2" path="res://objects/destination/destination_position_guide.tscn" id="19_vun8o"]
+[ext_resource type="AudioStream" uid="uid://c1ds4q7wi0spe" path="res://audio/jazz2.mp3" id="20_48gy4"]
+[ext_resource type="AudioStream" uid="uid://pxm6o3kynnmy" path="res://audio/crash.wav" id="21_8h2dr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -32,11 +34,11 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn"]
-vehiclePathnameListIndex = 15
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 12.57, 12.845)
+transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 19.375, 17.035)
 script = ExtResource("1_3kf58")
+offsetToTarget = Vector3(0, 19.375, 15.99)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 6.35031, 0)
@@ -47,6 +49,7 @@ mesh = SubResource("PlaneMesh_wexiq")
 
 [node name="car_position_guide" parent="." instance=ExtResource("4_md8l2")]
 transform = Transform3D(-0.0119902, 0, 0.999928, 0, 1, 0, -0.999928, 0, -0.0119902, -45.6526, 2.38419e-07, -3.61642)
+visible = false
 
 [node name="level" type="Node3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -2176,24 +2179,36 @@ collision_layer = 2
 
 [node name="destination" parent="." instance=ExtResource("19_vun8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4909, 1.43051e-06, -10.9937)
+visible = false
 
 [node name="ui" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1154.0
-offset_bottom = 649.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="fuel_bar" type="ProgressBar" parent="ui"]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -182.0
-offset_top = 588.96
-offset_right = 182.0
-offset_bottom = -23.0397
+offset_left = -304.0
+offset_top = -80.0
+offset_right = 100.0
+offset_bottom = -53.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
 allow_greater = true
 allow_lesser = true
+
+[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_48gy4")
+autoplay = true
+bus = &"Music"
+
+[node name="Crash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_8h2dr")
+bus = &"Sound Effects"
