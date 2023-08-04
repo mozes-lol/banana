@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c4hoh1kswb7qt"]
+[gd_scene load_steps=7 format=3 uid="uid://c4hoh1kswb7qt"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_kinek"]
 [ext_resource type="Script" path="res://levels/vehicleSpin.gd" id="2_8wonv"]
+[ext_resource type="FontFile" uid="uid://b1ns3y3xua8vb" path="res://assets/fonts/Roboto-Light.ttf" id="2_e5vbt"]
 [ext_resource type="ArrayMesh" uid="uid://d1ww8vnctibuh" path="res://assets/vehicles/sedan.obj" id="2_lxnwy"]
 [ext_resource type="AudioStream" uid="uid://bafbhq4hyrbxq" path="res://audio/jazz1.mp3" id="4_6xbo4"]
 [ext_resource type="AudioStream" uid="uid://bol5jcmh77yn5" path="res://audio/effect.mp3" id="5_yw4rm"]
@@ -42,17 +43,23 @@ theme_override_constants/separation = 44
 [node name="play" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
+theme_override_font_sizes/font_size = 36
 text = "Play"
 
 [node name="settings" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
+theme_override_font_sizes/font_size = 36
 text = "Settings
 "
 
 [node name="exit" type="Button" parent="ui/main_menu/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
+theme_override_font_sizes/font_size = 36
 text = "Exit
 "
 
@@ -91,35 +98,38 @@ layout_mode = 2
 
 [node name="master_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
 text = "Master Volume"
 
 [node name="master_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 max_value = 1.0
-step = 0.1
+step = 0.01
 value = 1.0
 
 [node name="music_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
 text = "Music Volume"
 
 [node name="music_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 max_value = 1.0
-step = 0.1
+step = 0.01
 value = 1.0
 
 [node name="sound_effects_volume_text" type="Label" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
 text = "Sound Effects Volume"
 
 [node name="sound_effects_volume" type="HSlider" parent="ui/settings/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 max_value = 1.0
-step = 0.1
+step = 0.01
 value = 1.0
 
 [node name="back_row" type="HBoxContainer" parent="ui/settings/Panel/MarginContainer"]
@@ -132,6 +142,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_e5vbt")
 theme_override_font_sizes/font_size = 0
 text = "Back
 "
@@ -148,6 +159,9 @@ bus = &"Music"
 
 [node name="AudioStreamPlayerEffects" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_yw4rm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.06958, 0)
 
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ui/main_menu/VBoxContainer/settings" to="." method="_on_settings_pressed"]
