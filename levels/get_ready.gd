@@ -6,6 +6,7 @@ extends Panel
 @onready var heart2 = get_node("/root/level_test_3d/ui/get_ready/MarginContainer/VBoxContainer/HBoxContainer/heart2")
 @onready var heart3 = get_node("/root/level_test_3d/ui/get_ready/MarginContainer/VBoxContainer/HBoxContainer/heart3")
 @onready var level_controller = get_node("/root/level_test_3d/level_controller")
+@onready var startTimer = level_controller.get_node("timer_controller/start_timer")
 
 func _process(delta: float) -> void:
 	if (level_controller.currentLives == 3):
@@ -24,3 +25,9 @@ func _process(delta: float) -> void:
 		heart1.texture = heartEmpty
 		heart2.texture = heartEmpty
 		heart3.texture = heartEmpty
+
+func enableGetReadyUI():
+	get_node(".").show()
+
+func disableGetReadyUI():
+	get_node(".").hide()
