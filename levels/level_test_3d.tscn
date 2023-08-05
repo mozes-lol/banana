@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=32 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
@@ -49,7 +49,6 @@ offset = Vector3(0, 2.5, 0)
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn", "res://objects/vehicles/car16/car16_test.tscn", "res://objects/vehicles/car17/car17_test.tscn", "res://objects/vehicles/car18/car18_test.tscn", "res://objects/vehicles/car 19/car19_test.tscn"]
-vehiclePathnameListIndex = 8
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.62932, 0.777146, 0, -0.777146, 0.62932, 0, 19.375, 17.035)
@@ -2193,28 +2192,42 @@ transform = Transform3D(-0.00706888, 0, -1.53998, 0, 1.54, 0, 1.53998, 0, -0.007
 collision_layer = 2
 
 [node name="Wall1" type="StaticBody3D" parent="level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.0909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.6771)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
 shape = SubResource("BoxShape3D_moots")
 
+[node name="Wall6" type="StaticBody3D" parent="level"]
+transform = Transform3D(0.147076, 0, 0, 0, 1, 0, 0, 0, 8.73207, -11.5388, 7.62939e-07, 10.3376)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
+shape = SubResource("BoxShape3D_moots")
+
+[node name="Wall5" type="StaticBody3D" parent="level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5457, -36.8001, -0.0697006, -11.1392)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
+shape = SubResource("BoxShape3D_moots")
+
 [node name="Wall2" type="StaticBody3D" parent="level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.4677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.1466)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
 shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall3" type="StaticBody3D" parent="level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.4677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26228, 0, -13.4677)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall3"]
 transform = Transform3D(0.0107684, 0, -0.999942, 0, 1, 0, 0.999942, 0, 0.0107684, 13.1924, 0, 10.5014)
 shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall4" type="StaticBody3D" parent="level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.4677)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80413, 0.0141403, -13.6611)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall4"]
 transform = Transform3D(0.0107684, 0, -0.999942, 0, 1, 0, 0.999942, 0, 0.0107684, -12.1727, 0, 10.5014)
