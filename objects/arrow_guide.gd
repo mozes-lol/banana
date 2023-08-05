@@ -6,6 +6,5 @@ extends Node3D
 @onready var destination = get_node("/root/level_test_3d/destination")
 
 func _process(delta: float) -> void:
-	print(destination)
 	global_position = levelController.currentVehicle.global_position + offset
 	look_at(levelController.currentVehicle.destination_position)

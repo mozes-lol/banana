@@ -15,6 +15,7 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 @onready var audioStreamPlayerMusic: AudioStreamPlayer = $AudioStreamPlayerMusic
 @onready var crashSFX = get_node("/root/level_test_3d/Crash")
 @onready var getReadyUi = get_node("/root/level_test_3d/ui/get_ready")
+@onready var ding = get_node("/root/level_test_3d/ding")
 
 var current_music_volume = 0
 
@@ -51,6 +52,7 @@ func roundStart():
 		print("All cars have already been driven.")
 	
 func roundSuccess():
+	ding.play()
 	# adds vehilce to vehicleReadyList
 	vehicleReadyList.append(currentVehicle)
 	currentVehicle.driving_status = "Replaying"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=31 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://levels/get_ready.gd" id="21_f35ir"]
 [ext_resource type="Texture2D" uid="uid://d4ibtuwd4m6vu" path="res://assets/fonts/heartFull.png" id="21_qre5a"]
 [ext_resource type="Script" path="res://levels/vehicleProgression.gd" id="23_andix"]
+[ext_resource type="AudioStream" uid="uid://d06r5p12ya1ma" path="res://audio/ding.wav" id="28_sxvj1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
 albedo_color = Color(0.909804, 0.909804, 0.909804, 0.678431)
@@ -2299,3 +2300,6 @@ bus = &"Music"
 [node name="Crash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("21_8h2dr")
 bus = &"Sound Effects"
+
+[node name="ding" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_sxvj1")
