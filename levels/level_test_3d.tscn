@@ -1,6 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=30 format=3 uid="uid://ctvm0eiklsuaf"]
 
+[ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
+[ext_resource type="Script" path="res://objects/arrow_guide.gd" id="2_8q15y"]
 [ext_resource type="PackedScene" uid="uid://dh2ftih4bm4ed" path="res://levels/level_controller.tscn" id="2_gjx61"]
 [ext_resource type="MeshLibrary" uid="uid://5lwn36h50gjd" path="res://objects/roads/roads_mesh_library.tres" id="3_6b2ma"]
 [ext_resource type="PackedScene" uid="uid://d3spggtia0ix2" path="res://objects/buildings/tree_big.tscn" id="3_duuc6"]
@@ -35,6 +37,11 @@ uv1_scale = Vector3(60, 60, 60)
 material = SubResource("StandardMaterial3D_ayysn")
 
 [node name="level_test_3d" type="Node3D"]
+
+[node name="arrowGuide" parent="." instance=ExtResource("1_1qmqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.42514, 0)
+script = ExtResource("2_8q15y")
+offset = Vector3(0, 2.5, 0)
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn"]
@@ -2181,7 +2188,7 @@ collision_layer = 2
 transform = Transform3D(-0.00706888, 0, -1.53998, 0, 1.54, 0, 1.53998, 0, -0.00706888, 1.45388, 0, -2.50196)
 collision_layer = 2
 
-[node name="destination" parent="." instance=ExtResource("19_vun8o")]
+[node name="destination_position_guide" parent="." instance=ExtResource("19_vun8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4909, 1.43051e-06, -10.9937)
 visible = false
 

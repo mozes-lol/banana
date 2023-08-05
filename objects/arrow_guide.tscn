@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnu33jgai5slt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fagug"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_defck"]
+
+[node name="arrowGuide" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.000820324, 0, -0.35, 0, 0.27381, 0, 0.999999, 0, -0.000287114, 0, 0, 0.214222)
+mesh = SubResource("BoxMesh_fagug")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0.000492264, -9.81937e-12, -2.51907e-16, -2.62268e-08, -0.27381, -0.000820428, -0.6, 1.19686e-08, 0, 0, -0.469583)
+mesh = SubResource("PrismMesh_defck")
