@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6dbsdvucvrxh"]
+
+[ext_resource type="Script" path="res://objects/vehicles/car test/car_test.gd" id="1_jye60"]
+[ext_resource type="ArrayMesh" uid="uid://b6pqqgtcnsd7n" path="res://assets/vehicles/truck.obj" id="2_q38oh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_451pp"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_mask = 7
+script = ExtResource("1_jye60")
+move_status = "no_move"
+starting_position = Vector3(-45.653, 0, 23.402)
+starting_rotation = Vector3(0, 78, 0)
+destination_position = Vector3(3.019, 0, 3.344)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.14239, 0, 0, 0, 1.23983, 0, 0, 0, 2.64, 0, 0.582493, -0.0565104)
+shape = SubResource("BoxShape3D_451pp")
+
+[node name="Truck" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_q38oh")
