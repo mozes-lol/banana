@@ -2235,6 +2235,7 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="destination_position_guide" parent="." instance=ExtResource("19_vun8o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2409, 1.43051e-06, 0.709628)
+visible = false
 
 [node name="ui" type="Control" parent="."]
 layout_mode = 3
