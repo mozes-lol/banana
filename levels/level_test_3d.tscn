@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=33 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
@@ -39,6 +39,10 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_moots"]
 size = Vector3(73.3102, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vi14k"]
+font = ExtResource("20_j3b44")
+font_size = 76
 
 [node name="level_test_3d" type="Node3D"]
 
@@ -2335,6 +2339,19 @@ theme_override_fonts/font = ExtResource("20_j3b44")
 theme_override_font_sizes/font_size = 171
 text = "0"
 horizontal_alignment = 1
+
+[node name="textPrompt" type="Label" parent="ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 759.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You cannot escape this realm. Stay inside the town."
+label_settings = SubResource("LabelSettings_vi14k")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_48gy4")
