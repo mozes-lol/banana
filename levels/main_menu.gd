@@ -11,6 +11,7 @@ extends Node3D
 
 func _ready() -> void:
 	hSliderMaster.value = AudioControl.get_master_bus_volume_linear()
+	hSliderMaster.value = 0 # change this back to 0.5 when you're done
 	hSliderMusic.value = AudioControl.get_music_bus_volume_linear()
 	hSliderMusic.value = 1
 	hSliderEffects.value = AudioControl.get_effects_bus_volume_linear()
