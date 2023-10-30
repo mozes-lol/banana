@@ -9,7 +9,7 @@
 size = Vector3(1, 0.74824, 0.778325)
 
 [node name="sedan" type="CharacterBody3D"]
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_2psha")
 move_status = "no_move"
 starting_position = Vector3(6.915, 0, 12.1)
