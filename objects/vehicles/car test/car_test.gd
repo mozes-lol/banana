@@ -104,7 +104,7 @@ func _physics_process(delta):
 				has_crashed = true
 				print("The vehicle has crashed.")
 				print("Vehicle collided with: ", collision.get_collider().name)
-			print(collision.get_collider().get_collision_layer())
+			print("Collision Layer: " + str(collision.get_collider().get_collision_layer()))
 	frames += 1
 
 func moveToStartingPosition():
