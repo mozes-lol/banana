@@ -89,7 +89,7 @@ func _process(delta):
 		if has_crashed == false:
 			levelController.roundFail()
 			has_crashed = true
-			print("The vehicle has lost all fuel.")
+			levelController.crashPrompt("gas")
 
 func _physics_process(delta):
 	# vehicle's movement
@@ -104,7 +104,10 @@ func _physics_process(delta):
 				has_crashed = true
 				print("The vehicle has crashed.")
 				print("Vehicle collided with: ", collision.get_collider().name)
-			print("Collision Layer: " + str(collision.get_collider().get_collision_layer()))
+			if collision.get_collider().get_collision_layer() == 2: # object
+				levelController.crashPrompt("object")
+			elif collision.get_collider().get_collision_layer() == 8: # border
+				levelController.crashPrompt("border")
 	frames += 1
 
 func moveToStartingPosition():
