@@ -97,3 +97,7 @@ func updateCameraTarget():
 	
 func crashPrompt(type):
 	get_node("crashPrompt").promptCrashText(type)
+	
+func _input(event):
+	if event.is_action_pressed("pause"):
+		get_tree().paused = true

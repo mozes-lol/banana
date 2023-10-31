@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=35 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
@@ -40,6 +40,10 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_moots"]
 size = Vector3(73.3102, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i357u"]
+font = ExtResource("20_j3b44")
+font_size = 286
 
 [sub_resource type="LabelSettings" id="LabelSettings_vi14k"]
 font = ExtResource("20_j3b44")
@@ -2295,6 +2299,7 @@ horizontal_alignment = 1
 script = ExtResource("23_andix")
 
 [node name="get_ready" type="Panel" parent="ui"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2352,6 +2357,30 @@ theme_override_fonts/font = ExtResource("20_j3b44")
 theme_override_font_sizes/font_size = 171
 text = "0"
 horizontal_alignment = 1
+
+[node name="pause" type="Panel" parent="ui"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="paused" type="Label" parent="ui/pause/MarginContainer"]
+layout_mode = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_i357u")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="textPrompt" type="Label" parent="ui"]
 layout_mode = 1
