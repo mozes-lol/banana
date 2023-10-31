@@ -3,6 +3,7 @@ extends Node
 # game variables
 @export var currentLives =  3
 @export_enum("Success", "Fail") var roundStatus = "Success"
+@export var gamePaused = false
 # vehicle listing
 @export var vehiclePathnameList := []
 @export var vehiclePathnameListIndex = 0
@@ -100,4 +101,9 @@ func crashPrompt(type):
 	
 func _input(event):
 	if event.is_action_pressed("pause"):
-		get_tree().paused = true
+		if gamePaused == false:
+			get_tree().paused = true
+			gamePaused = true
+		elif gamePaused == true:
+			get_tree().paused = false
+			gamePaused = false

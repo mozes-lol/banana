@@ -57,6 +57,7 @@ script = ExtResource("2_8q15y")
 offset = Vector3(0, 2.5, 0)
 
 [node name="level_controller" parent="." instance=ExtResource("2_gjx61")]
+process_mode = 3
 vehiclePathnameList = ["res://objects/vehicles/car test/car_test.tscn", "res://objects/vehicles/car test/car_test2.tscn", "res://objects/vehicles/car 2/car2_test.tscn", "res://objects/vehicles/car3/car3_test.tscn", "res://objects/vehicles/car4/car4_test.tscn", "res://objects/vehicles/car5/car5_test.tscn", "res://objects/vehicles/car6/car6_test.tscn", "res://objects/vehicles/car7/car7_test.tscn", "res://objects/vehicles/car8/car8_test.tscn", "res://objects/vehicles/car9/car9_test.tscn", "res://objects/vehicles/car10/car10_test.tscn", "res://objects/vehicles/car11/car11_test.tscn", "res://objects/vehicles/car12/car12_test.tscn", "res://objects/vehicles/car13/car13_test.tscn", "res://objects/vehicles/car14/car14_test.tscn", "res://objects/vehicles/car15/car15_test.tscn", "res://objects/vehicles/car16/car16_test.tscn", "res://objects/vehicles/car17/car17_test.tscn", "res://objects/vehicles/car18/car18_test.tscn", "res://objects/vehicles/car 19/car19_test.tscn"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
