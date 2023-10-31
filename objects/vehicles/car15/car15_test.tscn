@@ -7,7 +7,7 @@
 size = Vector3(1, 0.74824, 0.778325)
 
 [node name="car" type="CharacterBody3D"]
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_s4lax")
 speed = 20
 move_status = "no_move"

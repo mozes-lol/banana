@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ctvm0eiklsuaf"]
+[gd_scene load_steps=34 format=3 uid="uid://ctvm0eiklsuaf"]
 
 [ext_resource type="PackedScene" uid="uid://dnu33jgai5slt" path="res://objects/arrow_guide.tscn" id="1_1qmqq"]
 [ext_resource type="Script" path="res://levels/Camera3D.gd" id="1_3kf58"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://levels/get_ready.gd" id="21_f35ir"]
 [ext_resource type="Texture2D" uid="uid://d4ibtuwd4m6vu" path="res://assets/fonts/heartFull.png" id="21_qre5a"]
 [ext_resource type="Script" path="res://levels/vehicleProgression.gd" id="23_andix"]
+[ext_resource type="Script" path="res://levels/textPrompt.gd" id="26_wx8ch"]
 [ext_resource type="AudioStream" uid="uid://d06r5p12ya1ma" path="res://audio/ding.wav" id="28_sxvj1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayysn"]
@@ -39,6 +40,10 @@ material = SubResource("StandardMaterial3D_ayysn")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_moots"]
 size = Vector3(73.3102, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vi14k"]
+font = ExtResource("20_j3b44")
+font_size = 76
 
 [node name="level_test_3d" type="Node3D"]
 
@@ -2193,6 +2198,8 @@ collision_layer = 2
 
 [node name="Wall1" type="StaticBody3D" parent="level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.6771)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
@@ -2200,6 +2207,8 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall6" type="StaticBody3D" parent="level"]
 transform = Transform3D(0.147076, 0, 0, 0, 1, 0, 0, 0, 8.73207, -11.5388, 7.62939e-07, 10.3376)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
@@ -2207,6 +2216,8 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall5" type="StaticBody3D" parent="level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.5457, -36.8001, -0.0697006, -11.1392)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
@@ -2214,6 +2225,8 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall2" type="StaticBody3D" parent="level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12.1466)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.192798)
@@ -2221,6 +2234,8 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall3" type="StaticBody3D" parent="level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26228, 0, -13.4677)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall3"]
 transform = Transform3D(0.0107684, 0, -0.999942, 0, 1, 0, 0.999942, 0, 0.0107684, 13.1924, 0, 10.5014)
@@ -2228,6 +2243,8 @@ shape = SubResource("BoxShape3D_moots")
 
 [node name="Wall4" type="StaticBody3D" parent="level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.80413, 0.0141403, -13.6611)
+collision_layer = 8
+collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="level/Wall4"]
 transform = Transform3D(0.0107684, 0, -0.999942, 0, 1, 0, 0.999942, 0, 0.0107684, -12.1727, 0, 10.5014)
@@ -2335,6 +2352,20 @@ theme_override_fonts/font = ExtResource("20_j3b44")
 theme_override_font_sizes/font_size = 171
 text = "0"
 horizontal_alignment = 1
+
+[node name="textPrompt" type="Label" parent="ui"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 759.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "text"
+label_settings = SubResource("LabelSettings_vi14k")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("26_wx8ch")
 
 [node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_48gy4")

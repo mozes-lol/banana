@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh2ftih4bm4ed"]
+[gd_scene load_steps=5 format=3 uid="uid://dh2ftih4bm4ed"]
 
 [ext_resource type="Script" path="res://levels/level_controller.gd" id="1_w124f"]
 [ext_resource type="Script" path="res://levels/start_game_on_timer.gd" id="2_qmffv"]
+[ext_resource type="Script" path="res://levels/miniTutorial.gd" id="3_kyhed"]
+[ext_resource type="Script" path="res://levels/crashPrompt.gd" id="4_33k2b"]
 
 [node name="level_controller" type="Node"]
 script = ExtResource("1_w124f")
@@ -18,5 +20,17 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
+[node name="miniTutorialPrompt" type="Node" parent="."]
+script = ExtResource("3_kyhed")
+
+[node name="timer_tutorial" type="Timer" parent="miniTutorialPrompt"]
+wait_time = 3.0
+one_shot = true
+
+[node name="crashPrompt" type="Node" parent="."]
+script = ExtResource("4_33k2b")
+
 [connection signal="timeout" from="timer_controller/start_timer" to="timer_controller" method="_on_start_timer_timeout"]
+[connection signal="timeout" from="timer_controller/start_timer" to="miniTutorialPrompt" method="_on_start_timer_timeout"]
 [connection signal="timeout" from="timer_controller/end_timer" to="timer_controller" method="_on_end_timer_timeout"]
+[connection signal="timeout" from="miniTutorialPrompt/timer_tutorial" to="miniTutorialPrompt" method="_on_timer_tutorial_timeout"]

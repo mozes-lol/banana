@@ -24,7 +24,6 @@ AudioControl="*res://addons/audio_control/AudioControl.gd"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/size/resizable=false
 window/vsync/vsync_mode=0
 
@@ -60,3 +59,4 @@ reverse={
 3d_physics/layer_1="Cars"
 3d_physics/layer_2="Structures"
 3d_physics/layer_3="Destination"
+3d_physics/layer_4="Border"

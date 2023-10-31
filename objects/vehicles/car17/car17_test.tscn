@@ -7,7 +7,7 @@
 size = Vector3(0.797388, 0.74824, 0.917418)
 
 [node name="car" type="CharacterBody3D"]
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_xdqcy")
 move_status = "no_move"
 starting_position = Vector3(16.6, 0, 16.663)

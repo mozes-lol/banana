@@ -16,6 +16,7 @@ var currentVehicle # This dictates which vehicle the game systems will focus on 
 @onready var crashSFX = get_node("/root/level_test_3d/Crash")
 @onready var getReadyUi = get_node("/root/level_test_3d/ui/get_ready")
 @onready var ding = get_node("/root/level_test_3d/ding")
+@onready var textPrompt = get_node("/root/level_test_3d/ui/textPrompt")
 
 var current_music_volume = 0
 
@@ -77,6 +78,7 @@ func roundFail():
 
 func newRound():
 	roundStart()
+	textPrompt.text = ""
 	fuelBar.max_value = currentVehicle.max_fuel
 
 func markAsCurrentVehicle(objectName):
@@ -92,3 +94,6 @@ func stopAllSubVehicles():
 
 func updateCameraTarget():
 	get_node("/root/level_test_3d/level_controller/start_game_on_timer").target = currentVehicle
+	
+func crashPrompt(type):
+	get_node("crashPrompt").promptCrashText(type)
